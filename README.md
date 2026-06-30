@@ -2,9 +2,27 @@
 
 **Reality Operating System for Infrastructure Governance**
 
+**One governance framework. Many infrastructure applications.**
+
 BuildingOS is an open infrastructure governance framework for connecting project intelligence, procedures, evidence, expert review, digital ledgers and continuous decision support across the full lifecycle of infrastructure projects.
 
 It is designed to bridge planning, financing, construction, operation and long-term governance. BuildingOS does not replace engineers, planners, consultants or government procedures. It provides a structured governance layer so that infrastructure projects can be discovered, reviewed, verified, delivered and operated with better evidence.
+
+```text
+BuildingOS
+   │
+   ├── Climate Adaptation Applications
+   │       └── Wagga ClimateOS
+   │
+   ├── Infrastructure Governance Applications
+   │       └── PPP / BOT Governance
+   │
+   ├── Building Technology Applications
+   │       └── Modular Building Interface
+   │
+   └── Community Infrastructure Applications
+           └── Community Lighthouse
+```
 
 ---
 
@@ -96,6 +114,7 @@ Maintains a traceable record of project procedures, evidence, decisions, reviews
 BuildingOS is the parent platform. The following projects can operate as applications or demonstration cases inside the BuildingOS ecosystem:
 
 - [Wagga ClimateOS](https://github.com/simon947161/wagga-climate-os) — regional climate adaptation, planning intelligence and resilience prototype for Wagga Wagga and the Riverina.
+- [Wagga ClimateOS public demo](https://simon947161.github.io/wagga-climate-os/) — current web demonstration for the Wagga / Riverina climate adaptation prototype.
 - Modular Building Interface — micro-scale building component and interface governance.
 - PPP / BOT Governance — macro-scale infrastructure procedure, evidence and delivery governance.
 - Community Lighthouse — community-scale energy, shelter, resilience and local infrastructure model.
@@ -138,6 +157,14 @@ Infrastructure serves Civilization.
 Early-stage public framework.
 
 The first development focus is BuildingOS Core, including Infrastructure Project Intelligence, procedure mapping, evidence standards, review registers and governance workflows.
+
+---
+
+## Repository Relationship
+
+- **BuildingOS** is the parent infrastructure governance framework.
+- **Wagga ClimateOS** is the first regional climate adaptation application under the BuildingOS ecosystem.
+- Future applications may include modular building interfaces, PPP / BOT governance workflows, community infrastructure systems and regional energy platforms.
 
 ---
 
