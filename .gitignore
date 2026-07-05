@@ -1,0 +1,11 @@
+# OS and editor noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Local runtime and temporary outputs
+*.tmp
+*.log
+__pycache__/
+.pytest_cache/
+
