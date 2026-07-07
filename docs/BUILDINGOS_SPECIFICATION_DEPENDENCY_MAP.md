@@ -71,12 +71,24 @@ C00 BuildingOS Glossary Foundation
 | C01-A | Depends on C00; frozen v1.0. |
 | C01-B | Depends on C00 and C01-A; frozen v1.0. |
 | C01-C | Depends on C00, C01-A, and C01-B; frozen v1.0. |
-| C01-D | Depends on C00, C01-A, C01-B, and C01-C; active package. |
-| C01-E | Depends on C01-D; planned. |
-| C01-F | Depends on C01-D and C01-E; planned. |
-| C01-G | Depends on C01-A, C01-B, and C01-F; planned. |
-| C01-H | Depends on C01-C, C01-D, and C01-F; planned. |
-| C01-I | Depends on C01-A through C01-H; planned. |
+| C01-D | Depends on C00, C01-A, C01-B, and C01-C; frozen v1.0. |
+| C01-E | Depends on C00 and C01-D; frozen v1.0. |
+| C01-F | Depends on C00, C01-D, and C01-E; frozen v1.0. |
+| C01-G | Depends on C00, C01-A, C01-B, and C01-F; frozen v1.0. |
+| C01-H | Depends on C00, C01-C, C01-D, and C01-F; frozen v1.0. |
+| C01-I | Depends on C00 and C01-A through C01-H; frozen v1.0. |
+
+M1 Integration Review:
+
+```text
+PASSED
+```
+
+Core readiness state:
+
+```text
+READY_FOR_CORE_IMPLEMENTATION_PLANNING
+```
 
 ## Engineering Constraint
 

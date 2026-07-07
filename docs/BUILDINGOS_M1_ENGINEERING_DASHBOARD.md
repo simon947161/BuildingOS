@@ -10,7 +10,7 @@ M1 - Specification Foundation
 
 ## Status
 
-`ACTIVE`
+`COMPLETE_LOCALLY`
 
 ## Purpose
 
@@ -24,33 +24,34 @@ This dashboard is not a specification and does not authorize implementation.
 
 ## Current Position
 
-Current active package:
+Current package:
 
 ```text
-C01-D - Review Standard
+M1 Integration Review and Core Readiness Report
 ```
 
 Current state:
 
 ```text
-READY_FOR_APPROVAL
+READY_FOR_CORE_IMPLEMENTATION_PLANNING
 ```
 
-C01-E Procedure Standard must not begin until C01-D is approved and frozen.
+Core implementation must not begin until a C02 implementation planning brief is
+approved.
 
 ## Milestone Status
 
 Overall completion estimate:
 
 ```text
-45%
+100%
 ```
 
 Basis:
 
-- 4 frozen foundation specifications: C00, C01-A, C01-B, C01-C.
-- 1 specification drafted and engineering-reviewed: C01-D.
-- 5 remaining planned specifications: C01-E, C01-F, C01-G, C01-H, C01-I.
+- 10 frozen foundation specifications: C00 through C01-I.
+- M1 Integration Review completed locally.
+- Core Readiness Report completed locally.
 - Repository/workspace normalization completed locally.
 - Remote GitHub synchronization remains unresolved.
 
@@ -62,22 +63,23 @@ Basis:
 | C01-A | Evidence Standard | 1.0 | Frozen | None |
 | C01-B | Claim Standard | 1.0 | Frozen | None |
 | C01-C | Identity Standard | 1.0 | Frozen | None |
-| C01-D | Review Standard | 0.1-review | Ready For Approval | Needs approval and freeze before C01-E |
-| C01-E | Procedure Standard | Planned | Planned | Blocked by C01-D freeze |
-| C01-F | Lifecycle Standard | Planned | Planned | Blocked by C01-E |
-| C01-G | Registered Object Standard | Planned | Planned | Blocked by C01-F |
-| C01-H | Governance Ledger Standard | Planned | Planned | Blocked by C01-F and C01-D |
-| C01-I | Module Contract Standard | Planned | Planned | Blocked by prior C01 standards |
+| C01-D | Review Standard | 1.0 | Frozen | None |
+| C01-E | Procedure Standard | 1.0 | Frozen | None |
+| C01-F | Lifecycle Standard | 1.0 | Frozen | None |
+| C01-G | Registered Object Standard | 1.0 | Frozen | None |
+| C01-H | Governance Ledger Standard | 1.0 | Frozen | None |
+| C01-I | Module Contract Standard | 1.0 | Frozen | None |
+| M1-IR | Integration Review | 1.0 | Complete | None |
+| CRR | Core Readiness Report | 1.0 | Complete | None |
 
 ## Remaining Batches
 
-1. C01-D approval and freeze.
-2. C01-E Procedure Standard.
-3. C01-F Lifecycle Standard.
-4. C01-G Registered Object Standard.
-5. C01-H Governance Ledger Standard.
-6. C01-I Module Contract Standard.
-7. M1 integration review and Core-readiness review.
+No remaining M1 specification batches.
+
+Next non-implementation package:
+
+1. C02 BuildingOS Core Implementation Planning Brief.
+2. Remote GitHub synchronization once credentials/network allow it.
 
 ## Critical Path
 
@@ -90,17 +92,16 @@ C01-D Review
 -> C01-I Module Contract
 -> M1 Integration Review
 -> Core Implementation Readiness
+-> C02 Core Implementation Planning Brief
 ```
 
 ## Current Risks
 
 | Risk | Severity | Mitigation |
 | --- | --- | --- |
-| C01-D is not frozen yet | Medium | Do not start C01-E until approval and freeze are recorded. |
 | Remote GitHub synchronization unresolved | Medium | Verify credentials/network before treating GitHub as synchronized source of truth. |
-| Procedure may drift into workflow automation | Medium | Preserve Procedure -> Stage -> Gate -> Review -> Decision -> Next Procedure boundary. |
-| Review may be confused with Decision | Medium | Keep Review Recommendation non-authorizing. |
-| Future Core implementation may start too early | High | Require M1 integration review before Core implementation. |
+| Future Core implementation may start too early | High | Require C02 implementation planning brief approval before Core implementation. |
+| Frozen specifications may need refinement after implementation planning begins | Medium | Use Change Request and Version Review, not silent edits. |
 
 ## Architecture Health
 
@@ -112,11 +113,12 @@ HEALTHY
 
 Reason:
 
-- C00 through C01-C are frozen and internally consistent.
-- C01-D references frozen upstream standards.
+- C00 through C01-I are frozen and internally consistent.
 - Review remains separate from Decision.
 - Identity remains attribution-only.
 - Evidence and Claim boundaries remain intact.
+- Procedure remains governance structure rather than workflow automation.
+- Ledger remains governance traceability rather than blockchain or generic logging.
 
 Specification drift:
 
@@ -126,10 +128,9 @@ LOW
 
 Watch areas:
 
-- C01-E Procedure must not become a workflow engine.
-- C01-H Ledger must not become a general event log.
-- C01-I Module Contract must not imply the deferred `buildingos-modules`
-  repository exists.
+- Core implementation planning must preserve the frozen specification boundary.
+- Any future changes to frozen standards require Change Request and Version
+  Review.
 
 Boundary clarity:
 
@@ -141,14 +142,14 @@ Known boundary notes:
 
 - No runtime implementation in M1.
 - No Python package, SQLite schema, API, MCP, or PRI implementation.
-- No Core implementation until M1 completion.
+- No Core implementation until C02 is approved.
 
 ## Engineering Health
 
 Repository status:
 
 ```text
-LOCAL CLEAN
+CHECK CURRENT GIT STATUS AT REPORT TIME
 ```
 
 Documentation status:
@@ -171,55 +172,49 @@ GOOD
 
 Outstanding review items:
 
-- C01-D requires approval and freeze.
 - Remote GitHub push/verification remains unresolved.
+- C02 Core implementation planning brief has not been drafted.
 
 ## Readiness Assessment
 
 Core implementation readiness:
 
 ```text
-NOT READY
+READY_FOR_IMPLEMENTATION_PLANNING
 ```
 
 Estimated readiness:
 
 ```text
-45%
+100% for M1 Specification Foundation
 ```
 
 Still missing:
 
-- C01-D approval and freeze.
-- C01-E Procedure Standard.
-- C01-F Lifecycle Standard.
-- C01-G Registered Object Standard.
-- C01-H Governance Ledger Standard.
-- C01-I Module Contract Standard.
-- M1 integration review.
+- C02 implementation planning brief.
+- Explicit approval to begin Core implementation.
 - Remote repository verification and push.
 
 ## Engineering Manager Decision
 
-Do not continue to C01-E until C01-D receives approval and freeze.
+Do not begin Core implementation until C02 is drafted and approved.
 
 Recommended next decision:
 
 ```text
-APPROVE_AND_FREEZE_C01_D
+AUTHORIZE_C02_CORE_IMPLEMENTATION_PLANNING_BRIEF
 ```
 
 ## What BuildingOS Learned Today
 
-BuildingOS learned that it is no longer just collecting good ideas. It now has
-a managed engineering path.
+BuildingOS learned how to turn its core governance language into a complete
+specification baseline.
 
-The project gained a dashboard that shows what is complete, what is waiting,
-and what must happen next. This matters because BuildingOS is becoming a system
-that can be built in a controlled sequence rather than a set of scattered
-documents.
+The project now has frozen definitions for evidence, claims, actors, reviews,
+procedures, lifecycle states, registered objects, ledger records, and module
+contracts. This matters because Core implementation can now be planned against
+stable rules instead of unfinished ideas.
 
-The next learning step is to finish the Review Standard. That will teach
-BuildingOS how to evaluate evidence, claims, and responsibilities without
-mistaking review for approval.
-
+The next learning step is to translate these standards into a Core
+implementation plan without expanding the product scope or skipping the review
+gate.

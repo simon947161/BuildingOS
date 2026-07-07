@@ -14,11 +14,21 @@ C01-D - Review Standard
 
 ## Status
 
-`READY_FOR_APPROVAL`
+`FROZEN_V1_0`
 
 ## Version
 
-`0.1-review`
+`1.0`
+
+## Freeze Decision
+
+Codex Engineering Manager decision:
+
+```text
+APPROVE_AND_FREEZE_C01_D
+```
+
+C01-D Review Standard is frozen as Version 1.0.
 
 ## 1. Purpose
 
@@ -311,12 +321,14 @@ decision engine.
 Current state:
 
 ```text
-READY_FOR_APPROVAL
+FROZEN_V1_0
 ```
 
 Required next steps:
 
-1. C01-D approval confirmation.
-2. C01-D freeze.
-3. Proceed to C01-E Procedure Standard only after C01-D is approved and frozen.
+- `BUILDINGOS_C01_D_REVIEW_STANDARD_FREEZE_RECORD_V1_0.md`
+
+Next engineering batch:
+
+- C01-E - Procedure Standard.
 

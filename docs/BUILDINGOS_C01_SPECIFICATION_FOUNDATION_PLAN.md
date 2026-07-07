@@ -30,6 +30,7 @@ Current specification tracking artifacts:
 
 - `BUILDINGOS_SPECIFICATION_INDEX.md`
 - `BUILDINGOS_SPECIFICATION_DEPENDENCY_MAP.md`
+- `BUILDINGOS_SPECIFICATION_CHANGELOG.md`
 
 ## 1. Purpose
 
@@ -43,18 +44,19 @@ buildingos-spec
 
 This plan defines the C01 scope, reviewable sub-batches, conformance requirements, validation checks, and engineering review flow.
 
-This document does not create `buildingos-spec` and does not assign implementation to QClaw.
+This document does not create `buildingos-spec` and does not start Core
+implementation.
 
 ## 2. Current BEWP State
 
 ```text
-APPROVED_FOR_M1_PREPARATION
+M1_SPECIFICATION_FOUNDATION_COMPLETE_LOCALLY
 ```
 
-Target next state after this plan is reviewed:
+Target next state:
 
 ```text
-READY_FOR_QCLAW_C01_ASSIGNMENT
+C02_CORE_IMPLEMENTATION_PLANNING
 ```
 
 ## 3. Engineering Principles
@@ -259,7 +261,7 @@ Acceptance criteria:
 Status:
 
 ```text
-READY_FOR_APPROVAL
+FROZEN_V1_0
 ```
 
 Deliverables:
@@ -267,6 +269,7 @@ Deliverables:
 - `docs/BUILDINGOS_C01_D_REVIEW_STANDARD.md`
 - `docs/BUILDINGOS_C01_D_REVIEW_STANDARD_SELF_REVIEW.md`
 - `docs/CODEX_C01_D_ENGINEERING_REVIEW.md`
+- `docs/BUILDINGOS_C01_D_REVIEW_STANDARD_FREEZE_RECORD_V1_0.md`
 
 Acceptance criteria:
 
@@ -277,11 +280,18 @@ Acceptance criteria:
 
 ### C01-E - Procedure Standard
 
+Status:
+
+```text
+FROZEN_V1_0
+```
+
 Deliverables:
 
-- `specs/PROCEDURE_STANDARD.md`
-- `schemas/json/procedure.schema.json`
-- `schemas/examples/procedure.example.json`
+- `docs/BUILDINGOS_C01_E_PROCEDURE_STANDARD.md`
+- `docs/BUILDINGOS_C01_E_PROCEDURE_STANDARD_SELF_REVIEW.md`
+- `docs/CODEX_C01_E_ENGINEERING_REVIEW.md`
+- `docs/BUILDINGOS_C01_E_PROCEDURE_STANDARD_FREEZE_RECORD_V1_0.md`
 
 Acceptance criteria:
 
@@ -291,11 +301,18 @@ Acceptance criteria:
 
 ### C01-F - Lifecycle Standard
 
+Status:
+
+```text
+FROZEN_V1_0
+```
+
 Deliverables:
 
-- `specs/LIFECYCLE_STANDARD.md`
-- `schemas/json/lifecycle_event.schema.json`
-- `schemas/examples/lifecycle_event.example.json`
+- `docs/BUILDINGOS_C01_F_LIFECYCLE_STANDARD.md`
+- `docs/BUILDINGOS_C01_F_LIFECYCLE_STANDARD_SELF_REVIEW.md`
+- `docs/CODEX_C01_F_ENGINEERING_REVIEW.md`
+- `docs/BUILDINGOS_C01_F_LIFECYCLE_STANDARD_FREEZE_RECORD_V1_0.md`
 
 Acceptance criteria:
 
@@ -306,11 +323,18 @@ Acceptance criteria:
 
 ### C01-G - Registered Object Standard
 
+Status:
+
+```text
+FROZEN_V1_0
+```
+
 Deliverables:
 
-- `specs/REGISTERED_OBJECT_STANDARD.md`
-- `schemas/json/registered_object.schema.json`
-- `schemas/examples/registered_object.example.json`
+- `docs/BUILDINGOS_C01_G_REGISTERED_OBJECT_STANDARD.md`
+- `docs/BUILDINGOS_C01_G_REGISTERED_OBJECT_STANDARD_SELF_REVIEW.md`
+- `docs/CODEX_C01_G_ENGINEERING_REVIEW.md`
+- `docs/BUILDINGOS_C01_G_REGISTERED_OBJECT_STANDARD_FREEZE_RECORD_V1_0.md`
 
 Acceptance criteria:
 
@@ -320,11 +344,18 @@ Acceptance criteria:
 
 ### C01-H - Governance Ledger Standard
 
+Status:
+
+```text
+FROZEN_V1_0
+```
+
 Deliverables:
 
-- `specs/GOVERNANCE_LEDGER_STANDARD.md`
-- `schemas/json/ledger_entry.schema.json`
-- `schemas/examples/ledger_entry.example.json`
+- `docs/BUILDINGOS_C01_H_GOVERNANCE_LEDGER_STANDARD.md`
+- `docs/BUILDINGOS_C01_H_GOVERNANCE_LEDGER_STANDARD_SELF_REVIEW.md`
+- `docs/CODEX_C01_H_ENGINEERING_REVIEW.md`
+- `docs/BUILDINGOS_C01_H_GOVERNANCE_LEDGER_STANDARD_FREEZE_RECORD_V1_0.md`
 
 Acceptance criteria:
 
@@ -334,11 +365,18 @@ Acceptance criteria:
 
 ### C01-I - Module Contract Standard
 
+Status:
+
+```text
+FROZEN_V1_0
+```
+
 Deliverables:
 
-- `specs/MODULE_CONTRACT_STANDARD.md`
-- `schemas/json/module_manifest.schema.json`
-- `schemas/examples/module_manifest.example.json`
+- `docs/BUILDINGOS_C01_I_MODULE_CONTRACT_STANDARD.md`
+- `docs/BUILDINGOS_C01_I_MODULE_CONTRACT_STANDARD_SELF_REVIEW.md`
+- `docs/CODEX_C01_I_ENGINEERING_REVIEW.md`
+- `docs/BUILDINGOS_C01_I_MODULE_CONTRACT_STANDARD_FREEZE_RECORD_V1_0.md`
 
 Acceptance criteria:
 
@@ -346,22 +384,18 @@ Acceptance criteria:
 - Module contracts require declared capabilities, dependencies, and conformance targets.
 - Module contracts do not bypass Core governance semantics.
 
-### C01-J - Final Review Package
+### M1 Integration Review and Core Readiness
 
 Deliverables:
 
-- Updated `checks/CONFORMANCE_MATRIX.md`
-- Final C01 verification report
-- BEWP review checklist
-- QClaw implementation report template
+- `docs/BUILDINGOS_M1_INTEGRATION_REVIEW.md`
+- `docs/BUILDINGOS_CORE_READINESS_REPORT.md`
 
 Acceptance criteria:
 
-- Every standard has a matching schema and example.
-- Every schema has a matching conformance checklist entry.
 - Scope exclusions are explicit.
-- Git status is clean.
-- Codex engineering review passes.
+- Frozen specifications are coherent as a baseline.
+- Core readiness is assessed without starting implementation.
 
 ## 8. Conformance Requirements
 
@@ -396,7 +430,7 @@ Every example must:
 
 ## 9. Validation Checks
 
-Minimum validation expected from QClaw after assignment:
+Minimum validation expected from Codex during this milestone:
 
 - File manifest check
 - Markdown required-section check
@@ -445,34 +479,32 @@ Mitigation: only governed platform objects with evidence/review/lifecycle/ledger
 | Simon | Product direction and scope confirmation |
 | ChatGPT | Architecture and governance review |
 | Codex | Engineering manager, brief owner, review owner |
-| QClaw | Implementation after assignment only |
+| QClaw | No active BuildingOS Core execution responsibility during this milestone |
 
 ## 12. Internal Engineering Review
 
 Codex review result for this plan:
 
 ```text
-READY_FOR_REVIEW
+M1_SPECIFICATION_FOUNDATION_COMPLETE_LOCALLY
 ```
 
 Reason:
 
 - Roadmap v1.0 is approved for Milestone M1.
-- C01 scope is planning-only.
-- Batches are small and reviewable.
-- Implementation remains unassigned.
+- C01 specification foundation is complete locally.
+- Batches were completed under the Incremental Review Principle.
+- Core implementation remains gated by a future implementation planning brief.
 
 ## 13. Next Step
 
-Review this C01 plan.
-
-If approved, Codex may issue the scoped QClaw implementation brief:
+Next engineering package:
 
 ```text
-QCLAW_C01_BUILDINGOS_SPEC_FOUNDATION_BRIEF.md
+C02 - BuildingOS Core Implementation Planning Brief
 ```
 
-That brief must remain limited to `buildingos-spec` foundation work.
+C02 must remain planning-only until explicitly approved.
 
 ## 14. Conversation Radar
 
@@ -505,12 +537,12 @@ Risks:
 
 Open questions:
 
-- Should QClaw implement C01 one sub-batch at a time?
-- Should JSON schema validation tooling be required in C01 or accepted as best-effort?
-- Should the conformance matrix be the primary closure artifact?
+- Should C02 include executable conformance checks, or remain documentation-only?
+- Should JSON schema validation tooling be introduced during Core planning or deferred until implementation?
+- Should the conformance matrix become the primary closure artifact for Core implementation batches?
 
 Next actions:
 
-1. Review C01 plan.
-2. Approve or request changes.
-3. If approved, Codex issues QClaw C01-A implementation brief first.
+1. Prepare C02 BuildingOS Core Implementation Planning Brief.
+2. Review C02 for architecture and governance alignment.
+3. Begin Core implementation only after C02 approval.
