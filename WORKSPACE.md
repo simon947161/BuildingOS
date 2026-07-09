@@ -12,12 +12,12 @@ GitHub repository:
 simon947161/BuildingOS
 ```
 
-Remote availability has not been verified from this sandboxed environment.
+Remote availability has been verified.
 
 ## Local Workspace Path
 
 ```text
-C:\Users\doras\Documents\Codex\2026-06-29\task-001-infrastructure-project-intelligence-ipi\BuildingOS
+D:\Codex\BuildingOS
 ```
 
 ## Branch
@@ -51,12 +51,14 @@ The following folders are deprecated for new BuildingOS M1 work:
 
 | Deprecated Path | Reason |
 | --- | --- |
+| `C:\Users\doras\OneDrive\Documents\BuildingOS` | Old C drive / OneDrive workspace. Deprecated because C drive storage is limited and OneDrive may create sync conflicts. |
 | `C:\Users\doras\Documents\Codex\2026-06-29\task-001-infrastructure-project-intelligence-ipi\buildingos-modular-interface` | Old mixed BOMI / BuildingOS engineering working folder. |
 | `C:\Users\doras\Documents\Codex\2026-06-29\task-001-infrastructure-project-intelligence-ipi\docs` | Old IPI module documentation folder, not the normalized BuildingOS workspace. |
 | `C:\Users\doras\Documents\Codex\2026-06-29\task-001-infrastructure-project-intelligence-ipi\ipi` | IPI Python module folder, not BuildingOS M1 specification source of truth. |
 
 ## Rule
 
-Do not continue BuildingOS M1 specification development outside this workspace
-unless a new workspace migration or repository-boundary decision is approved.
+Do not continue BuildingOS M1 specification development outside the official
+`D:\Codex\BuildingOS` workspace unless a new workspace migration or
+repository-boundary decision is approved.
 
