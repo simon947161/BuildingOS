@@ -40,6 +40,7 @@ limited and OneDrive may create sync conflicts.
 - Core Readiness Report completed.
 - GitHub remote sync completed.
 - C02 Core Implementation Planning Brief drafted.
+- C02 Core Implementation Planning Review drafted.
 
 ## Frozen Baselines
 - C00 Glossary Foundation v1.0
@@ -63,9 +64,11 @@ limited and OneDrive may create sync conflicts.
 - docs/BUILDINGOS_M1_ENGINEERING_DASHBOARD.md
 - docs/BUILDINGOS_CORE_READINESS_REPORT.md
 - docs/BUILDINGOS_C02_CORE_IMPLEMENTATION_PLANNING_BRIEF.md
+- docs/BUILDINGOS_C02_CORE_IMPLEMENTATION_PLANNING_REVIEW.md
 
 ## Outstanding Reviews
 - Review C02 Core Implementation Planning Brief.
+- Review C02 Core Implementation Planning Review.
 - Approve or revise C02 before any Core implementation begins.
 
 ## Current Risks
@@ -97,6 +100,7 @@ Do not implement code yet.
 - docs/BUILDINGOS_M1_ENGINEERING_DASHBOARD.md
 - docs/BUILDINGOS_CORE_READINESS_REPORT.md
 - docs/BUILDINGOS_C02_CORE_IMPLEMENTATION_PLANNING_BRIEF.md
+- docs/BUILDINGOS_C02_CORE_IMPLEMENTATION_PLANNING_REVIEW.md
 
 ## Safe Re-entry Point
 Continue from:
