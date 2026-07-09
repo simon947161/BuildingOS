@@ -126,7 +126,25 @@ Recommended Core modules:
 9. `module_contract`
 10. `conformance`
 
-## 4. Recommended Implementation Sequence
+## 4. Items Safe For First Implementation
+
+The following items are safe for first implementation only after C02-E
+Implementation Authorization is approved:
+
+- Actor attribution records.
+- Evidence records.
+- Claim records with evidence links and support status.
+- Review records without decision authority.
+- Procedure structures without workflow automation.
+- Lifecycle structures without automated state-machine behavior.
+- Registered Object records for traceability.
+- Governance Ledger records for governance traceability.
+- Module Contract declarations and conformance checks.
+
+Safe first implementation does not include production runtime, external
+integrations, automation, application migration, or real project decisions.
+
+## 5. Recommended Implementation Sequence
 
 Recommended sequence:
 
@@ -147,7 +165,7 @@ Tests before code.
 Code only after authorization.
 ```
 
-## 5. Reviewable Engineering Sub-Batches
+## 6. Reviewable Engineering Sub-Batches
 
 ### C02-A - Core Repository Skeleton Review
 
@@ -219,7 +237,7 @@ Review focus:
 - Approved test strategy.
 - Accepted exclusions.
 
-## 6. Acceptance Criteria For Each Batch
+## 7. Acceptance Criteria For Each Batch
 
 | Batch | Acceptance Criteria |
 | --- | --- |
@@ -229,7 +247,7 @@ Review focus:
 | C02-D | Tests are defined before implementation; fixtures are fictional; conformance and boundary tests are mapped to M1 requirements. |
 | C02-E | Chief Architect approves or rejects implementation start; open architecture questions are resolved or deferred with explicit boundaries. |
 
-## 7. Risks Of Premature Implementation
+## 8. Risks Of Premature Implementation
 
 | Risk | Severity | Why It Matters | Mitigation |
 | --- | --- | --- | --- |
@@ -242,7 +260,7 @@ Review focus:
 | Ledger becomes blockchain or generic log | Medium | Ledger meaning would drift from governance traceability. | Restrict ledger to governance records. |
 | Module Contract becomes execution | Medium | Contract declarations could become runtime module loading. | Keep module contracts declarative. |
 
-## 8. Items Requiring Architecture Review Before Coding
+## 9. Items Requiring Architecture Review Before Coding
 
 The following items require Architecture Review before any implementation:
 
@@ -258,7 +276,7 @@ The following items require Architecture Review before any implementation:
 - Handling of imported M1 baseline references.
 - Definition of implementation authorization evidence for C02-E.
 
-## 9. Items That Must Remain Outside BuildingOS Core
+## 10. Items That Must Remain Outside BuildingOS Core
 
 The following items must remain outside BuildingOS Core at this stage:
 
@@ -282,7 +300,7 @@ The following items must remain outside BuildingOS Core at this stage:
 - Generic agent runtime.
 - PRI integration.
 
-## 10. Recommended Next Approval Gate
+## 11. Recommended Next Approval Gate
 
 Recommended next approval gate:
 
