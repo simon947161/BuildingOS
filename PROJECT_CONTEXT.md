@@ -42,6 +42,7 @@ limited and OneDrive may create sync conflicts.
 - C02 Core Implementation Planning Brief drafted.
 - C02 Core Implementation Planning Review drafted.
 - C02 Core Implementation Approval Record drafted for Chief Architect review.
+- Core Batch 01 Implementation Brief drafted for review.
 
 ## Frozen Baselines
 - C00 Glossary Foundation v1.0
@@ -67,11 +68,13 @@ limited and OneDrive may create sync conflicts.
 - docs/BUILDINGOS_C02_CORE_IMPLEMENTATION_PLANNING_BRIEF.md
 - docs/BUILDINGOS_C02_CORE_IMPLEMENTATION_PLANNING_REVIEW.md
 - docs/BUILDINGOS_C02_CORE_IMPLEMENTATION_APPROVAL_RECORD.md
+- docs/BUILDINGOS_CORE_BATCH_01_IMPLEMENTATION_BRIEF.md
 
 ## Outstanding Reviews
 - Review C02 Core Implementation Planning Brief.
 - Review C02 Core Implementation Planning Review.
 - Review C02 Core Implementation Approval Record.
+- Review Core Batch 01 Implementation Brief.
 - Approve or revise C02 before any Core implementation begins.
 
 ## Current Risks
@@ -105,11 +108,12 @@ Do not implement code yet.
 - docs/BUILDINGOS_C02_CORE_IMPLEMENTATION_PLANNING_BRIEF.md
 - docs/BUILDINGOS_C02_CORE_IMPLEMENTATION_PLANNING_REVIEW.md
 - docs/BUILDINGOS_C02_CORE_IMPLEMENTATION_APPROVAL_RECORD.md
+- docs/BUILDINGOS_CORE_BATCH_01_IMPLEMENTATION_BRIEF.md
 
 ## Safe Re-entry Point
 Continue from:
 
-C02 Core Implementation Approval Record Review
+Core Batch 01 Implementation Brief Review
 
 Do not start Core implementation until C02 is approved.
 
