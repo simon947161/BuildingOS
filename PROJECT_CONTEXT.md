@@ -1,51 +1,39 @@
 # PROJECT_CONTEXT.md
 
 ## Project
+
 BuildingOS
 
 ## Repository
-simon947161/BuildingOS
+
+`simon947161/BuildingOS`
 
 ## Branch
-main
 
-## Latest Commit
-24fde24 Add BuildingOS remote sync report and C02 planning brief
-
-## Current Phase
-Post-M1 / Core Planning Preparation
-
-## Current Milestone
-C02 - BuildingOS Core Implementation Planning Brief
-
-## Current Status
-C02_DRAFT_FOR_REVIEW
-
-## Official Repository
-https://github.com/simon947161/BuildingOS.git
+`main`
 
 ## Official Local Workspace
-D:\Codex\BuildingOS
+
+`D:\Codex\BuildingOS`
 
 ## Deprecated Local Workspace
-C:\Users\doras\OneDrive\Documents\BuildingOS
 
-The old C drive / OneDrive workspace is deprecated because C drive storage is
-limited and OneDrive may create sync conflicts.
+`C:\Users\doras\OneDrive\Documents\BuildingOS`
 
-## Completed Work
-- M1 Specification Foundation completed locally.
-- C00 through C01-I frozen as Version 1.0.
-- M1 Integration Review completed.
-- Core Readiness Report completed.
-- GitHub remote sync completed.
-- C02 Core Implementation Planning Brief drafted.
-- C02 Core Implementation Planning Review drafted.
-- C02 Core Implementation Approval Record drafted for Chief Architect review.
-- Core Batch 01 Implementation Brief drafted for review.
-- Core Batch 01 Implementation Brief Review drafted.
+## Current Phase
+
+`CORE_BATCH_01_IMPLEMENTATION`
+
+## Current Milestone
+
+Minimum Governance Kernel representational implementation.
+
+## Current Status
+
+`IMPLEMENTATION_STARTED_PENDING_CI_AND_ENGINEERING_REVIEW`
 
 ## Frozen Baselines
+
 - C00 Glossary Foundation v1.0
 - C01-A Evidence Standard v1.0
 - C01-B Claim Standard v1.0
@@ -57,75 +45,88 @@ limited and OneDrive may create sync conflicts.
 - C01-H Governance Ledger Standard v1.0
 - C01-I Module Contract Standard v1.0
 
-## Active Documents
-- README.md
-- WORKSPACE.md
-- PROJECT_CONTEXT.md
-- CODEX_CONTEXT_TRANSFER_PACKET.md
-- BUILDINGOS_WORKSPACE_RELOCATION_REPORT.md
-- BUILDINGOS_REMOTE_SYNC_CONFIRMATION_REPORT.md
-- docs/BUILDINGOS_M1_ENGINEERING_DASHBOARD.md
-- docs/BUILDINGOS_CORE_READINESS_REPORT.md
-- docs/BUILDINGOS_C02_CORE_IMPLEMENTATION_PLANNING_BRIEF.md
-- docs/BUILDINGOS_C02_CORE_IMPLEMENTATION_PLANNING_REVIEW.md
-- docs/BUILDINGOS_C02_CORE_IMPLEMENTATION_APPROVAL_RECORD.md
-- docs/BUILDINGOS_CORE_BATCH_01_IMPLEMENTATION_BRIEF.md
-- docs/BUILDINGOS_CORE_BATCH_01_IMPLEMENTATION_BRIEF_REVIEW.md
+These documents remain frozen. Changes require Change Request, Version Review, Approval, and Update.
 
-## Outstanding Reviews
-- Review C02 Core Implementation Planning Brief.
-- Review C02 Core Implementation Planning Review.
-- Review C02 Core Implementation Approval Record.
-- Review Core Batch 01 Implementation Brief.
-- Review Core Batch 01 Implementation Brief Review.
-- Approve or revise C02 before any Core implementation begins.
+## Completed Gates
 
-## Current Risks
-- Core implementation may start too early.
-- Frozen M1 specs must not be silently changed.
-- Any future M1 edits require Change Request + Version Review.
+- M1 Specification Foundation completed and frozen.
+- C02 planning brief and review completed.
+- C02 approval gate completed.
+- Core Batch 01 Implementation Brief completed.
+- Core Batch 01 brief review completed.
+- Core Batch 01 brief approved with conditions.
+- Architecture boundary documented.
+- M1 conformance matrix documented.
+- Batch 01 test strategy documented.
+- Operator Console roadmap documented.
+- Core Batch 01 implementation authorization recorded.
 
-## Next Recommended Actions
-1. Review C02 planning brief.
-2. Confirm Core repository structure.
-3. Confirm first minimal Governance Kernel scope.
-4. Confirm test strategy.
-5. Only after approval, begin C02-A repository skeleton planning.
+## Implementation Added
 
-## Engineering Manager Notes
-Do not restart M1.
-Do not return to C01-D.
-Do not redesign architecture.
-Do not assign QClaw.
-Do not implement code yet.
+- `buildingos_core/models.py`
+- `buildingos_core/conformance.py`
+- `buildingos_core/__init__.py`
+- `tests/test_core_batch_01.py`
+- `.github/workflows/core-batch-01.yml`
 
-## Files To Read First
-- README.md
-- WORKSPACE.md
-- PROJECT_CONTEXT.md
-- CODEX_CONTEXT_TRANSFER_PACKET.md
-- BUILDINGOS_WORKSPACE_RELOCATION_REPORT.md
-- BUILDINGOS_REMOTE_SYNC_CONFIRMATION_REPORT.md
-- docs/BUILDINGOS_M1_ENGINEERING_DASHBOARD.md
-- docs/BUILDINGOS_CORE_READINESS_REPORT.md
-- docs/BUILDINGOS_C02_CORE_IMPLEMENTATION_PLANNING_BRIEF.md
-- docs/BUILDINGOS_C02_CORE_IMPLEMENTATION_PLANNING_REVIEW.md
-- docs/BUILDINGOS_C02_CORE_IMPLEMENTATION_APPROVAL_RECORD.md
-- docs/BUILDINGOS_CORE_BATCH_01_IMPLEMENTATION_BRIEF.md
-- docs/BUILDINGOS_CORE_BATCH_01_IMPLEMENTATION_BRIEF_REVIEW.md
+Implemented representational records:
+
+- Actor
+- Evidence
+- Claim
+- Review without decision authority
+- Procedure without execution
+- Lifecycle without automated transitions
+- Registered Object
+- Governance Ledger Entry
+- Module Contract
+- Conformance Result
+
+## Active Boundaries
+
+Core Batch 01 excludes:
+
+- production database;
+- public API;
+- production Operator Console;
+- permissions and user management;
+- workflow automation;
+- autonomous decision-making;
+- PRI, MCP Runtime, generic agent runtime, QClaw, and n8n integration;
+- application migration;
+- frozen Foundation edits.
+
+## Human Interface Direction
+
+A future BuildingOS Operator Console is planned for human evidence inspection, claim inspection, review, lifecycle visibility, module contract visibility, and governance ledger visibility.
+
+UI implementation remains deferred until the Governance Kernel is stable and separately authorized.
+
+## Current Verification State
+
+- Repository changes have been committed directly to `main` through the connected GitHub workflow.
+- A GitHub Actions workflow has been added for compile and unit-test checks.
+- CI result is not yet recorded in this context.
+- Direct local test execution from the current ChatGPT runtime was blocked because that runtime could not resolve `github.com`; this is an environment limitation, not a passing test result.
+
+## Next Actions
+
+1. Confirm GitHub Actions execution and inspect any failures.
+2. Fix implementation defects if CI fails.
+3. Add full fictional fixture set and cross-object registry checks.
+4. Perform implementation self-review.
+5. Perform Codex engineering review.
+6. Prepare Core Batch 01 approval and freeze record only after tests pass.
+7. After Governance Kernel freeze, prepare the read-only Operator Console prototype brief.
 
 ## Safe Re-entry Point
+
 Continue from:
 
-Core Batch 01 Implementation Brief Review Decision
+`CORE_BATCH_01_CI_AND_ENGINEERING_REVIEW`
 
-Do not start Core implementation until C02 is approved.
+Do not claim Batch 01 complete or frozen until CI and engineering review pass.
 
 ## Context Protocol
-Every major milestone, repository transition, workspace transition, or
-long-thread closure must generate a `CODEX_CONTEXT_TRANSFER_PACKET.md`.
 
-`PROJECT_CONTEXT.md` is the permanent repository-root latest-state context
-file.
-
-Context Transfer Packets are historical snapshots for future Codex threads.
+Every major milestone, repository transition, workspace transition, or long-thread closure must update this file and create a context transfer packet when needed.
