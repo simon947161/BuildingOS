@@ -22,15 +22,19 @@ BuildingOS
 
 ## Current Phase
 
-`CORE_BATCH_01_IMPLEMENTATION`
+`CORE_BATCH_01_CLOSURE`
 
 ## Current Milestone
 
-Minimum Governance Kernel representational implementation.
+Minimum Governance Kernel representational implementation approval and freeze gate.
 
 ## Current Status
 
-`IMPLEMENTATION_STARTED_PENDING_CI_AND_ENGINEERING_REVIEW`
+`VERIFIED_ENGINEERING_REVIEW_PASS_PENDING_CHIEF_ARCHITECT_APPROVAL_AND_FREEZE`
+
+## Verified Implementation Baseline
+
+`f84b22bf4921e4f98e15598c5c5a5aa18bcaa996`
 
 ## Frozen Baselines
 
@@ -50,23 +54,30 @@ These documents remain frozen. Changes require Change Request, Version Review, A
 ## Completed Gates
 
 - M1 Specification Foundation completed and frozen.
-- C02 planning brief and review completed.
-- C02 approval gate completed.
-- Core Batch 01 Implementation Brief completed.
-- Core Batch 01 brief review completed.
-- Core Batch 01 brief approved with conditions.
-- Architecture boundary documented.
-- M1 conformance matrix documented.
-- Batch 01 test strategy documented.
-- Operator Console roadmap documented.
-- Core Batch 01 implementation authorization recorded.
+- C02 planning and approval gates completed.
+- Core Batch 01 brief, review, architecture boundary, conformance matrix, test strategy, and implementation authorization completed.
+- Minimum Governance Kernel source implemented.
+- Full fictional fixture set added.
+- Cross-object registry checks added.
+- Explicit M1 structure checks added for all in-scope objects.
+- Deterministic regression coverage added.
+- Implementation self-review passed.
+- GitHub Actions verification passed.
+- Engineering review passed.
+- Approval and freeze records prepared for Chief Architect review.
 
-## Implementation Added
+## Implementation And Test Artifacts
 
 - `buildingos_core/models.py`
 - `buildingos_core/conformance.py`
+- `buildingos_core/registry.py`
 - `buildingos_core/__init__.py`
+- `tests/fixtures/`
+- `tests/conformance/`
+- `tests/regression/`
 - `tests/test_core_batch_01.py`
+- `tests/test_core_batch_01_registry.py`
+- `tests/test_core_batch_01_ci_probe.py`
 - `.github/workflows/core-batch-01.yml`
 
 Implemented representational records:
@@ -81,6 +92,39 @@ Implemented representational records:
 - Governance Ledger Entry
 - Module Contract
 - Conformance Result
+
+## Verification State
+
+Isolated verification:
+
+```text
+Ran 34 tests
+OK
+```
+
+Hosted verification:
+
+```text
+Workflow: Core Batch 01
+Run ID: 29159400862
+Run number: 11
+Job: test
+Conclusion: success
+```
+
+Engineering review decision:
+
+```text
+PASS
+```
+
+## Closure Records
+
+- `docs/CORE_BATCH_01_TEST_MANIFEST.md`
+- `docs/BUILDINGOS_CORE_BATCH_01_IMPLEMENTATION_SELF_REVIEW.md`
+- `docs/BUILDINGOS_CORE_BATCH_01_ENGINEERING_REVIEW.md`
+- `docs/BUILDINGOS_CORE_BATCH_01_APPROVAL_RECORD.md`
+- `docs/BUILDINGOS_CORE_BATCH_01_FREEZE_RECORD.md`
 
 ## Active Boundaries
 
@@ -98,34 +142,34 @@ Core Batch 01 excludes:
 
 ## Human Interface Direction
 
-A future BuildingOS Operator Console is planned for human evidence inspection, claim inspection, review, lifecycle visibility, module contract visibility, and governance ledger visibility.
+A future read-only BuildingOS Operator Console may provide Mission Control-style human visibility for evidence, claims, reviews, lifecycle state, module contracts, and governance ledger records.
 
-UI implementation remains deferred until the Governance Kernel is stable and separately authorized.
+Operator Console implementation remains deferred until the Chief Architect explicitly approves and activates the Core Batch 01 freeze.
 
-## Current Verification State
+## Decision Required
 
-- Repository changes have been committed directly to `main` through the connected GitHub workflow.
-- A GitHub Actions workflow has been added for compile and unit-test checks.
-- CI result is not yet recorded in this context.
-- Direct local test execution from the current ChatGPT runtime was blocked because that runtime could not resolve `github.com`; this is an environment limitation, not a passing test result.
+Chief Architect decision:
+
+```text
+APPROVE_CORE_BATCH_01_FOR_FREEZE
+```
+
+The batch is verified and technically ready, but it is not yet formally frozen.
 
 ## Next Actions
 
-1. Confirm GitHub Actions execution and inspect any failures.
-2. Fix implementation defects if CI fails.
-3. Add full fictional fixture set and cross-object registry checks.
-4. Perform implementation self-review.
-5. Perform Codex engineering review.
-6. Prepare Core Batch 01 approval and freeze record only after tests pass.
-7. After Governance Kernel freeze, prepare the read-only Operator Console prototype brief.
+1. Chief Architect reviews the approval and freeze records.
+2. Record approval, correction request, or rejection.
+3. If approved, activate the freeze record and update this context to `CORE_BATCH_01_FROZEN`.
+4. Only after freeze activation, prepare a bounded read-only Operator Console prototype brief.
 
 ## Safe Re-entry Point
 
 Continue from:
 
-`CORE_BATCH_01_CI_AND_ENGINEERING_REVIEW`
+`CORE_BATCH_01_CHIEF_ARCHITECT_FREEZE_DECISION`
 
-Do not claim Batch 01 complete or frozen until CI and engineering review pass.
+Do not claim formal freeze or begin Operator Console implementation before approval is recorded.
 
 ## Context Protocol
 
