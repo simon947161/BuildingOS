@@ -270,3 +270,14 @@ class ConformanceResult(CoreRecord):
         for name, value in required.items():
             if not value.strip():
                 raise ValueError(f"{name} must not be empty")
+
+    @property
+    def checked_at(self) -> str:
+        """Expose the M1 conformance timestamp name without duplicating storage."""
+
+        return self.created_at
+
+    def to_dict(self) -> dict[str, Any]:
+        data = super().to_dict()
+        data["checked_at"] = self.checked_at
+        return data
