@@ -15,6 +15,7 @@ from .models import (
     GovernanceLedgerEntry,
     RegisteredObject,
     Review,
+    utc_now_iso,
 )
 
 
@@ -29,10 +30,12 @@ def _result(
     subject_type: str,
     subject_id: str,
     messages: Iterable[str],
+    checked_at: str | None = None,
 ) -> ConformanceResult:
     message_tuple = tuple(messages)
     return ConformanceResult(
         record_id=f"conformance:{check_id}:{subject_id}",
+        created_at=checked_at or utc_now_iso(),
         check_id=check_id,
         m1_source=m1_source,
         subject_type=subject_type,
@@ -47,7 +50,10 @@ def _result(
 
 
 def check_evidence_actor_reference(
-    evidence: Evidence, actors: Iterable[Actor]
+    evidence: Evidence,
+    actors: Iterable[Actor],
+    *,
+    checked_at: str | None = None,
 ) -> ConformanceResult:
     messages: list[str] = []
     if evidence.captured_by_actor_id not in _record_ids(actors):
@@ -61,11 +67,15 @@ def check_evidence_actor_reference(
         subject_type="Evidence",
         subject_id=evidence.record_id,
         messages=messages,
+        checked_at=checked_at,
     )
 
 
 def check_claim_actor_reference(
-    claim: Claim, actors: Iterable[Actor]
+    claim: Claim,
+    actors: Iterable[Actor],
+    *,
+    checked_at: str | None = None,
 ) -> ConformanceResult:
     messages: list[str] = []
     if claim.asserted_by_actor_id not in _record_ids(actors):
@@ -79,6 +89,7 @@ def check_claim_actor_reference(
         subject_type="Claim",
         subject_id=claim.record_id,
         messages=messages,
+        checked_at=checked_at,
     )
 
 
@@ -87,6 +98,8 @@ def check_review_references(
     actors: Iterable[Actor],
     subject_records: Iterable[CoreRecord],
     evidence_records: Iterable[Evidence],
+    *,
+    checked_at: str | None = None,
 ) -> ConformanceResult:
     actor_ids = _record_ids(actors)
     subject_ids = _record_ids(subject_records)
@@ -120,11 +133,15 @@ def check_review_references(
         subject_type="Review",
         subject_id=review.record_id,
         messages=messages,
+        checked_at=checked_at,
     )
 
 
 def check_registered_object_owner(
-    registered_object: RegisteredObject, actors: Iterable[Actor]
+    registered_object: RegisteredObject,
+    actors: Iterable[Actor],
+    *,
+    checked_at: str | None = None,
 ) -> ConformanceResult:
     messages: list[str] = []
     if registered_object.owner_actor_id not in _record_ids(actors):
@@ -141,6 +158,7 @@ def check_registered_object_owner(
         subject_type="RegisteredObject",
         subject_id=registered_object.record_id,
         messages=messages,
+        checked_at=checked_at,
     )
 
 
@@ -148,6 +166,8 @@ def check_ledger_references(
     entry: GovernanceLedgerEntry,
     actors: Iterable[Actor],
     subject_records: Iterable[CoreRecord],
+    *,
+    checked_at: str | None = None,
 ) -> ConformanceResult:
     actor_ids = _record_ids(actors)
     subject_ids = _record_ids(subject_records)
@@ -165,11 +185,15 @@ def check_ledger_references(
         subject_type="GovernanceLedgerEntry",
         subject_id=entry.record_id,
         messages=messages,
+        checked_at=checked_at,
     )
 
 
 def check_record_id_uniqueness(
-    records: Iterable[CoreRecord], *, collection_id: str
+    records: Iterable[CoreRecord],
+    *,
+    collection_id: str,
+    checked_at: str | None = None,
 ) -> ConformanceResult:
     record_ids = [record.record_id for record in records]
     duplicates = sorted(
@@ -182,4 +206,5 @@ def check_record_id_uniqueness(
         subject_type="CoreRecordCollection",
         subject_id=collection_id,
         messages=messages,
+        checked_at=checked_at,
     )
