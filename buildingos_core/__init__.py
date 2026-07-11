@@ -24,6 +24,14 @@ from .models import (
     ReviewStatus,
     SupportStatus,
 )
+from .registry import (
+    check_claim_actor_reference,
+    check_evidence_actor_reference,
+    check_ledger_references,
+    check_record_id_uniqueness,
+    check_registered_object_owner,
+    check_review_references,
+)
 
 __all__ = [
     "Actor",
@@ -43,7 +51,13 @@ __all__ = [
     "ReviewStatus",
     "SupportStatus",
     "check_actor_attribution",
+    "check_claim_actor_reference",
     "check_claim_evidence_links",
+    "check_evidence_actor_reference",
+    "check_ledger_references",
     "check_module_contract_types",
+    "check_record_id_uniqueness",
+    "check_registered_object_owner",
     "check_review_boundary",
+    "check_review_references",
 ]
