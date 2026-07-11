@@ -1,0 +1,29 @@
+name: Core Batch 01
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "buildingos_core/**"
+      - "tests/**"
+      - ".github/workflows/core-batch-01.yml"
+  pull_request:
+    paths:
+      - "buildingos_core/**"
+      - "tests/**"
+      - ".github/workflows/core-batch-01.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile package and tests
+        run: python -m compileall -q buildingos_core tests
+      - name: Run Core Batch 01 tests
+        run: python -m unittest discover -s tests -v
