@@ -146,6 +146,24 @@ A future read-only BuildingOS Operator Console may provide Mission Control-style
 
 Operator Console implementation remains deferred until the Chief Architect explicitly approves and activates the Core Batch 01 freeze.
 
+## Future Regulatory and Knowledge Garden Planning
+
+Planning record:
+
+- `docs/BUILDINGOS_REGULATORY_KNOWLEDGE_AND_KNOWLEDGE_GARDEN_PLAN.md`
+
+The plan preserves a future Regulatory Knowledge Layer covering NCC source/version/effective-date context, referenced standards, NSW legislation and regulations, jurisdictional variations, applicability and compliance-related claims, source change tracking, and mandatory human review.
+
+It also records a Markdown-first Obsidian/Knowledge Garden compatibility model in which GitHub remains the authoritative source, portable links and indexes are preferred, synchronisation is controlled, and authoritative legal or standards content is not duplicated without permission.
+
+Planning status:
+
+```text
+PLANNING_BASELINE_V0_1_NOT_IMPLEMENTATION_AUTHORIZATION
+```
+
+This record does not alter Core, approve legal or certification advice, authorize regulatory connectors, or bypass the current freeze and UI gates.
+
 ## Decision Required
 
 Chief Architect decision:
@@ -162,6 +180,7 @@ The batch is verified and technically ready, but it is not yet formally frozen.
 2. Record approval, correction request, or rejection.
 3. If approved, activate the freeze record and update this context to `CORE_BATCH_01_FROZEN`.
 4. Only after freeze activation, prepare a bounded read-only Operator Console prototype brief.
+5. Keep Regulatory Knowledge Layer and Knowledge Garden work at planning level until separate architecture and implementation authorization exist.
 
 ## Safe Re-entry Point
 
