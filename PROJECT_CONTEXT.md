@@ -22,17 +22,17 @@ BuildingOS
 
 ## Current Phase
 
-`CORE_BATCH_01_CLOSURE`
+`POST_CORE_BATCH_01_PRODUCT_ARCHITECTURE_PLANNING`
 
 ## Current Milestone
 
-Minimum Governance Kernel representational implementation approval and freeze gate.
+BuildingOS Product North Star, cross-domain evidence intake, project classification, lifecycle architecture, and human-interface planning.
 
 ## Current Status
 
-`VERIFIED_ENGINEERING_REVIEW_PASS_PENDING_CHIEF_ARCHITECT_APPROVAL_AND_FREEZE`
+`CORE_BATCH_01_FROZEN_READY_FOR_NEXT_PLANNING_BATCH`
 
-## Verified Implementation Baseline
+## Frozen Core Batch 01 Implementation Baseline
 
 `f84b22bf4921e4f98e15598c5c5a5aa18bcaa996`
 
@@ -48,8 +48,9 @@ Minimum Governance Kernel representational implementation approval and freeze ga
 - C01-G Registered Object Standard v1.0
 - C01-H Governance Ledger Standard v1.0
 - C01-I Module Contract Standard v1.0
+- Core Batch 01 minimum Governance Kernel implementation at `f84b22bf4921e4f98e15598c5c5a5aa18bcaa996`
 
-These documents remain frozen. Changes require Change Request, Version Review, Approval, and Update.
+Changes to any frozen baseline require Change Request, Engineering Review, Architecture Review when required, Chief Architect Approval, and an updated Freeze Record.
 
 ## Completed Gates
 
@@ -64,7 +65,10 @@ These documents remain frozen. Changes require Change Request, Version Review, A
 - Implementation self-review passed.
 - GitHub Actions verification passed.
 - Engineering review passed.
-- Approval and freeze records prepared for Chief Architect review.
+- Baseline integrity verified.
+- Chief Architect recorded `APPROVE_CORE_BATCH_01_FOR_FREEZE` on 2026-07-13.
+- Core Batch 01 Approval Record activated.
+- Core Batch 01 Freeze Record activated.
 
 ## Implementation And Test Artifacts
 
@@ -118,33 +122,78 @@ Engineering review decision:
 PASS
 ```
 
+Baseline integrity decision:
+
+```text
+VERIFIED_IMPLEMENTATION_BASELINE_UNCHANGED
+```
+
+Freeze decision:
+
+```text
+CORE_BATCH_01_FROZEN
+```
+
 ## Closure Records
 
 - `docs/CORE_BATCH_01_TEST_MANIFEST.md`
 - `docs/BUILDINGOS_CORE_BATCH_01_IMPLEMENTATION_SELF_REVIEW.md`
 - `docs/BUILDINGOS_CORE_BATCH_01_ENGINEERING_REVIEW.md`
+- `docs/BUILDINGOS_CORE_BATCH_01_BASELINE_INTEGRITY_CHECK.md`
 - `docs/BUILDINGOS_CORE_BATCH_01_APPROVAL_RECORD.md`
 - `docs/BUILDINGOS_CORE_BATCH_01_FREEZE_RECORD.md`
 
 ## Active Boundaries
 
-Core Batch 01 excludes:
+The frozen Core Batch 01 excludes and does not authorize:
 
 - production database;
 - public API;
 - production Operator Console;
 - permissions and user management;
 - workflow automation;
-- autonomous decision-making;
+- automatic lifecycle transitions;
+- autonomous decision-making or approval authority;
 - PRI, MCP Runtime, generic agent runtime, QClaw, and n8n integration;
 - application migration;
+- regulatory source connectors;
+- legal, compliance, certification, or professional conclusions;
 - frozen Foundation edits.
+
+## Product Direction
+
+BuildingOS is being developed as an AI-native, evidence-driven, human-governed operating system for progressing built-environment and infrastructure projects through planning, design, approvals, procurement, construction, commissioning, handover, operation, maintenance, adaptation, and end-of-life activities.
+
+The next architecture must support different project scales and types through a shared governance kernel, Project Genome, project-specific lifecycle graphs, domain capability packs, jurisdiction knowledge packs, tool adapters, and an adaptive human interface.
+
+## Cross-Domain Evidence Direction
+
+A documentation-only ClimateOS-to-BuildingOS evidence intake contract is planned.
+
+ClimateOS may contribute observations, climate-risk evidence, model outputs, sources, provenance, dates, methods, and uncertainty. BuildingOS may register and organise these as project evidence subject to human review.
+
+ClimateOS conclusions, automated compliance decisions, approval authority, and unsupported project claims must not be imported as BuildingOS decisions.
+
+The NEXTDC S7 Sydney project may be treated as a candidate large and complex project evidence case for learning about data-centre buildings, MEP systems, BIM, fixtures, construction, commissioning, operations, site context, climate risk, source provenance, and regulatory interfaces. It is not yet an approved live BuildingOS implementation.
 
 ## Human Interface Direction
 
-A future read-only BuildingOS Operator Console may provide Mission Control-style human visibility for evidence, claims, reviews, lifecycle state, module contracts, and governance ledger records.
+A future read-only BuildingOS Operator Console may provide Mission Control-style human visibility through:
 
-Operator Console implementation remains deferred until the Chief Architect explicitly approves and activates the Core Batch 01 freeze.
+- Portfolio Console;
+- Project Cockpit;
+- Stage Workspace;
+- Decision and Evidence Room;
+- Evidence Desk;
+- Claim Desk;
+- Review Workspace;
+- Lifecycle Board;
+- Governance Ledger;
+- Module Contract Registry.
+
+A bounded documentation-only Operator Console Prototype Brief may now be prepared.
+
+Production UI implementation remains deferred until separate architecture review and explicit Chief Architect implementation approval.
 
 ## Future Regulatory and Knowledge Garden Planning
 
@@ -162,33 +211,39 @@ Planning status:
 PLANNING_BASELINE_V0_1_NOT_IMPLEMENTATION_AUTHORIZATION
 ```
 
-This record does not alter Core, approve legal or certification advice, authorize regulatory connectors, or bypass the current freeze and UI gates.
+This planning does not approve legal or certification advice, regulatory connectors, paid-standard duplication, or automated compliance conclusions.
 
-## Decision Required
+## Next Governed Planning Sequence
 
-Chief Architect decision:
+1. Create or refine the BuildingOS Product North Star.
+2. Define the ClimateOS-to-BuildingOS Cross-Domain Evidence Intake Contract.
+3. Prepare an S7 Sydney candidate large-project evidence intake profile.
+4. Define the Project Genome and Classification Standard.
+5. Define the Lifecycle Stage Graph Architecture.
+6. Define the Human Interface Architecture and bounded read-only Operator Console Prototype Brief.
+7. Propose small, medium, and large pilot projects.
+8. Continue Regulatory Knowledge Layer and Markdown-first Knowledge Garden planning without implementation.
 
-```text
-APPROVE_CORE_BATCH_01_FOR_FREEZE
-```
+## Decisions Requiring Chief Architect Review
 
-The batch is verified and technically ready, but it is not yet formally frozen.
+Routine documentation may proceed within the above sequence.
 
-## Next Actions
+Return to the Chief Architect before:
 
-1. Chief Architect reviews the approval and freeze records.
-2. Record approval, correction request, or rejection.
-3. If approved, activate the freeze record and update this context to `CORE_BATCH_01_FROZEN`.
-4. Only after freeze activation, prepare a bounded read-only Operator Console prototype brief.
-5. Keep Regulatory Knowledge Layer and Knowledge Garden work at planning level until separate architecture and implementation authorization exist.
+- materially changing BuildingOS product scope;
+- changing the BuildingOS–PRI–ClimateOS architecture boundary;
+- selecting or activating a live pilot project;
+- asserting legal, compliance, certification, contractual, or professional authority;
+- authorizing implementation code for the next milestone;
+- introducing a database, public API, permissions, automated workflow, external connector, production UI, or autonomous approval capability.
 
 ## Safe Re-entry Point
 
 Continue from:
 
-`CORE_BATCH_01_CHIEF_ARCHITECT_FREEZE_DECISION`
+`POST_CORE_BATCH_01_PRODUCT_NORTH_STAR_AND_EVIDENCE_INTAKE_PLANNING`
 
-Do not claim formal freeze or begin Operator Console implementation before approval is recorded.
+Do not modify the frozen Foundation or Core Batch 01 baseline without formal Change Request governance.
 
 ## Context Protocol
 
