@@ -22,15 +22,15 @@ BuildingOS
 
 ## Current Phase
 
-`POST_CORE_BATCH_01_PRODUCT_ARCHITECTURE_PLANNING`
+`POST_CORE_BATCH_01_PROJECT_GENOME_PLANNING`
 
 ## Current Milestone
 
-BuildingOS Product North Star, cross-domain evidence intake, project classification, lifecycle architecture, and human-interface planning.
+BuildingOS Project Genome and Classification Standard, followed by lifecycle architecture, human-interface architecture, and pilot planning.
 
 ## Current Status
 
-`CORE_BATCH_01_FROZEN_READY_FOR_NEXT_PLANNING_BATCH`
+`PRODUCT_NORTH_STAR_AND_EVIDENCE_INTAKE_BASELINES_COMPLETE_READY_FOR_PROJECT_GENOME`
 
 ## Frozen Core Batch 01 Implementation Baseline
 
@@ -69,6 +69,9 @@ Changes to any frozen baseline require Change Request, Engineering Review, Archi
 - Chief Architect recorded `APPROVE_CORE_BATCH_01_FOR_FREEZE` on 2026-07-13.
 - Core Batch 01 Approval Record activated.
 - Core Batch 01 Freeze Record activated.
+- BuildingOS Product North Star documentation baseline prepared.
+- ClimateOS-to-BuildingOS Cross-Domain Evidence Intake Contract prepared.
+- NEXTDC S7 Sydney candidate large-project evidence intake profile prepared.
 
 ## Implementation And Test Artifacts
 
@@ -143,9 +146,16 @@ CORE_BATCH_01_FROZEN
 - `docs/BUILDINGOS_CORE_BATCH_01_APPROVAL_RECORD.md`
 - `docs/BUILDINGOS_CORE_BATCH_01_FREEZE_RECORD.md`
 
+## Current Product Architecture Records
+
+- `docs/BUILDINGOS_PRODUCT_NORTH_STAR.md`
+- `docs/BUILDINGOS_CLIMATEOS_CROSS_DOMAIN_EVIDENCE_INTAKE_CONTRACT.md`
+- `docs/BUILDINGOS_S7_SYDNEY_CANDIDATE_EVIDENCE_INTAKE_PROFILE.md`
+- `docs/BUILDINGOS_REGULATORY_KNOWLEDGE_AND_KNOWLEDGE_GARDEN_PLAN.md`
+
 ## Active Boundaries
 
-The frozen Core Batch 01 excludes and does not authorize:
+The frozen Core Batch 01 and the current documentation planning do not authorize:
 
 - production database;
 - public API;
@@ -156,29 +166,62 @@ The frozen Core Batch 01 excludes and does not authorize:
 - autonomous decision-making or approval authority;
 - PRI, MCP Runtime, generic agent runtime, QClaw, and n8n integration;
 - application migration;
+- automated ClimateOS-to-BuildingOS transfer;
 - regulatory source connectors;
-- legal, compliance, certification, or professional conclusions;
-- frozen Foundation edits.
+- legal, compliance, certification, contractual, engineering-signoff, or professional conclusions;
+- live pilot activation;
+- frozen Foundation or Core edits.
 
-## Product Direction
+## Product North Star
 
-BuildingOS is being developed as an AI-native, evidence-driven, human-governed operating system for progressing built-environment and infrastructure projects through planning, design, approvals, procurement, construction, commissioning, handover, operation, maintenance, adaptation, and end-of-life activities.
+The authoritative current product-direction record is:
 
-The next architecture must support different project scales and types through a shared governance kernel, Project Genome, project-specific lifecycle graphs, domain capability packs, jurisdiction knowledge packs, tool adapters, and an adaptive human interface.
+- `docs/BUILDINGOS_PRODUCT_NORTH_STAR.md`
+
+BuildingOS is being developed as an AI-native, evidence-driven, human-governed operating system for helping people progress built-environment and infrastructure projects through their full lifecycle with visible evidence, explicit claims, accountable review, and traceable decisions.
+
+The architecture direction supports different project scales and types through a shared governance kernel, Project Genome, project-specific lifecycle graphs, domain capability packs, jurisdiction knowledge packs, evidence exchange contracts, tool adapters, and an adaptive human interface.
+
+The North Star is a documentation baseline and does not authorize implementation.
 
 ## Cross-Domain Evidence Direction
 
-A documentation-only ClimateOS-to-BuildingOS evidence intake contract is planned.
+The authoritative current ClimateOS handoff contract is:
 
-ClimateOS may contribute observations, climate-risk evidence, model outputs, sources, provenance, dates, methods, and uncertainty. BuildingOS may register and organise these as project evidence subject to human review.
+- `docs/BUILDINGOS_CLIMATEOS_CROSS_DOMAIN_EVIDENCE_INTAKE_CONTRACT.md`
 
-ClimateOS conclusions, automated compliance decisions, approval authority, and unsupported project claims must not be imported as BuildingOS decisions.
+ClimateOS may contribute observations, climate-risk evidence, model outputs, sources, provenance, dates, methods, uncertainty, and authorised building, MEP, BIM, fixture, construction, commissioning, operations, and site-context evidence.
 
-The NEXTDC S7 Sydney project may be treated as a candidate large and complex project evidence case for learning about data-centre buildings, MEP systems, BIM, fixtures, construction, commissioning, operations, site context, climate risk, source provenance, and regulatory interfaces. It is not yet an approved live BuildingOS implementation.
+BuildingOS may register and organise these inputs as project evidence subject to human review.
+
+ClimateOS conclusions, automated compliance decisions, approval authority, lifecycle control, runtime capability, and unsupported project claims must not be imported as BuildingOS decisions.
+
+No connector, database, API, queue, webhook, MCP tool, agent runtime, permissions model, or automated transfer is authorised.
+
+## S7 Sydney Candidate Direction
+
+The current candidate profile is:
+
+- `docs/BUILDINGOS_S7_SYDNEY_CANDIDATE_EVIDENCE_INTAKE_PROFILE.md`
+
+The NEXTDC S7 Sydney project is treated only as a candidate large and complex project learning case for information architecture, project classification, lifecycle, MEP, BIM, construction, commissioning, operations, climate-risk, source-provenance, and regulatory-evidence planning.
+
+Current status:
+
+```text
+CANDIDATE_LARGE_COMPLEX_PROJECT_LEARNING_CASE
+NOT_APPROVED_AS_LIVE_BUILDINGOS_PILOT
+NO_PROJECT_AUTHORITY
+NO_CONFIDENTIAL_DATA_ACCESS
+```
+
+Public reporting and corporate statements must remain distinguished from official planning records, approved design, as-built condition, and operational evidence.
+
+Critical-infrastructure, security-sensitive, confidential, personal, network, access-control, and protected operational information must not be placed in the public repository.
 
 ## Human Interface Direction
 
-A future read-only BuildingOS Operator Console may provide Mission Control-style human visibility through:
+A future read-only BuildingOS Operator Console may provide human visibility through:
 
 - Portfolio Console;
 - Project Cockpit;
@@ -191,7 +234,7 @@ A future read-only BuildingOS Operator Console may provide Mission Control-style
 - Governance Ledger;
 - Module Contract Registry.
 
-A bounded documentation-only Operator Console Prototype Brief may now be prepared.
+Human Interface Architecture and a bounded documentation-only Operator Console Prototype Brief remain future roadmap deliverables.
 
 Production UI implementation remains deferred until separate architecture review and explicit Chief Architect implementation approval.
 
@@ -201,9 +244,17 @@ Planning record:
 
 - `docs/BUILDINGOS_REGULATORY_KNOWLEDGE_AND_KNOWLEDGE_GARDEN_PLAN.md`
 
-The plan preserves a future Regulatory Knowledge Layer covering NCC source/version/effective-date context, referenced standards, NSW legislation and regulations, jurisdictional variations, applicability and compliance-related claims, source change tracking, and mandatory human review.
+The planned Regulatory Knowledge Layer preserves NCC source, version, edition, effective-date and jurisdiction context; referenced standards metadata and licensing boundaries; NSW legislation, regulation and planning-source context; jurisdictional variations; source-change tracking; applicability and compliance-related claims; and mandatory human review.
 
-It also records a Markdown-first Obsidian/Knowledge Garden compatibility model in which GitHub remains the authoritative source, portable links and indexes are preferred, synchronisation is controlled, and authoritative legal or standards content is not duplicated without permission.
+The Markdown-first Knowledge Garden model preserves:
+
+- GitHub as the authoritative approved source;
+- portable Markdown, stable filenames, indexes, and ordinary links;
+- reviewable promotion of drafts;
+- separation of private research from approved records;
+- controlled synchronisation;
+- no blind two-way folder sync;
+- no copied shadow library of NCC, standards, legislation, paid databases, or other controlled material.
 
 Planning status:
 
@@ -211,18 +262,16 @@ Planning status:
 PLANNING_BASELINE_V0_1_NOT_IMPLEMENTATION_AUTHORIZATION
 ```
 
-This planning does not approve legal or certification advice, regulatory connectors, paid-standard duplication, or automated compliance conclusions.
+This planning does not approve legal or certification advice, regulatory connectors, paid-standard duplication, automated compliance conclusions, or production interface work.
 
 ## Next Governed Planning Sequence
 
-1. Create or refine the BuildingOS Product North Star.
-2. Define the ClimateOS-to-BuildingOS Cross-Domain Evidence Intake Contract.
-3. Prepare an S7 Sydney candidate large-project evidence intake profile.
-4. Define the Project Genome and Classification Standard.
-5. Define the Lifecycle Stage Graph Architecture.
-6. Define the Human Interface Architecture and bounded read-only Operator Console Prototype Brief.
-7. Propose small, medium, and large pilot projects.
-8. Continue Regulatory Knowledge Layer and Markdown-first Knowledge Garden planning without implementation.
+1. Define the BuildingOS Project Genome and Classification Standard.
+2. Define the Lifecycle Stage Graph Architecture.
+3. Define the Human Interface Architecture and bounded read-only Operator Console Prototype Brief.
+4. Propose small, medium, and large pilot project candidates.
+5. Continue Regulatory Knowledge Layer and Markdown-first Knowledge Garden planning without implementation.
+6. Review the combined documentation package before any implementation authorization.
 
 ## Decisions Requiring Chief Architect Review
 
@@ -233,15 +282,30 @@ Return to the Chief Architect before:
 - materially changing BuildingOS product scope;
 - changing the BuildingOS–PRI–ClimateOS architecture boundary;
 - selecting or activating a live pilot project;
-- asserting legal, compliance, certification, contractual, or professional authority;
+- asserting legal, compliance, certification, contractual, statutory, engineering-signoff, or professional authority;
 - authorizing implementation code for the next milestone;
+- modifying the frozen Foundation or Core Batch 01 baseline;
 - introducing a database, public API, permissions, automated workflow, external connector, production UI, or autonomous approval capability.
+
+## Current Blockers
+
+No blocker prevents the next documentation-only roadmap item.
+
+The official local workspace `D:\Codex\BuildingOS` was not independently inspected during the GitHub connector run. GitHub `main` remains the source of truth, and the local workspace should pull the latest commits before local work resumes.
 
 ## Safe Re-entry Point
 
 Continue from:
 
-`POST_CORE_BATCH_01_PRODUCT_NORTH_STAR_AND_EVIDENCE_INTAKE_PLANNING`
+`PROJECT_GENOME_AND_CLASSIFICATION_STANDARD_PLANNING`
+
+Read first:
+
+1. `PROJECT_CONTEXT.md`
+2. `docs/BUILDINGOS_PRODUCT_NORTH_STAR.md`
+3. `docs/BUILDINGOS_CLIMATEOS_CROSS_DOMAIN_EVIDENCE_INTAKE_CONTRACT.md`
+4. `docs/BUILDINGOS_S7_SYDNEY_CANDIDATE_EVIDENCE_INTAKE_PROFILE.md`
+5. `docs/BUILDINGOS_REGULATORY_KNOWLEDGE_AND_KNOWLEDGE_GARDEN_PLAN.md`
 
 Do not modify the frozen Foundation or Core Batch 01 baseline without formal Change Request governance.
 
