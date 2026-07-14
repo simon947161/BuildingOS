@@ -22,15 +22,15 @@ BuildingOS
 
 ## Current Phase
 
-`POST_CORE_BATCH_01_COMBINED_DOCUMENTATION_REVIEW`
+`POST_FREEZE_RKL_1_COMPLETE_CHIEF_ARCHITECT_DECISION_GATE`
 
 ## Current Milestone
 
-Review the completed post-freeze product architecture and pilot-candidate documentation package before any pilot selection or implementation authorization.
+The post-freeze documentation roadmap and RKL-1 source-governance architecture are complete and reviewed. Further progress now requires a governed choice between fictional regulatory demonstration planning, real pilot selection review, a bounded implementation-brief gate, or pause.
 
 ## Current Status
 
-`ROADMAP_DOCUMENTATION_BASELINES_COMPLETE_READY_FOR_COMBINED_REVIEW`
+`DOCUMENTATION_ROADMAP_AND_RKL_1_COMPLETE_NO_IMPLEMENTATION_AUTHORIZATION`
 
 ## Frozen Core Batch 01 Implementation Baseline
 
@@ -64,28 +64,61 @@ Change Request
 
 - M1 Specification Foundation completed and frozen.
 - C02 planning and approval gates completed.
-- Core Batch 01 brief, review, architecture boundary, conformance matrix, test strategy, and implementation authorization completed.
-- Minimum Governance Kernel source implemented.
-- Full fictional fixture set added.
-- Cross-object registry checks added.
-- Explicit M1 structure checks added for all in-scope objects.
-- Deterministic regression coverage added.
-- Implementation self-review passed.
-- GitHub Actions verification passed.
-- Engineering review passed.
-- Baseline integrity verified.
-- Chief Architect recorded `APPROVE_CORE_BATCH_01_FOR_FREEZE` on 2026-07-13.
-- Core Batch 01 Approval Record activated.
-- Core Batch 01 Freeze Record activated.
-- BuildingOS Product North Star documentation baseline prepared.
+- Core Batch 01 implementation, tests, self-review, CI verification, engineering review, integrity verification, approval, and freeze completed.
+- BuildingOS Product North Star prepared.
 - ClimateOS-to-BuildingOS Cross-Domain Evidence Intake Contract prepared.
-- NEXTDC S7 Sydney candidate large-project evidence intake profile prepared.
-- BuildingOS Project Genome and Classification Standard prepared.
-- BuildingOS Lifecycle Stage Graph Architecture prepared.
-- BuildingOS Human Interface Architecture prepared.
+- NEXTDC S7 Sydney candidate evidence profile prepared.
+- Project Genome and Classification Standard prepared.
+- Lifecycle Stage Graph Architecture prepared.
+- Human Interface Architecture prepared.
 - Read-Only Operator Console Prototype Brief prepared.
 - Small, medium, and large or complex pilot candidates proposed without selection or activation.
 - Regulatory Knowledge Layer and Knowledge Garden planning status refreshed after Core freeze.
+- Post-Freeze Documentation Architecture Review completed with PASS.
+- RKL-1 Source Governance and Information Architecture prepared.
+- RKL-1 Documentation Review completed with PASS.
+- README historical status wording refreshed.
+
+## Verification State
+
+Core verification:
+
+```text
+Ran 34 tests
+OK
+
+Workflow: Core Batch 01
+Run ID: 29159400862
+Run number: 11
+Job: test
+Conclusion: success
+
+Engineering review: PASS
+Baseline integrity: VERIFIED_IMPLEMENTATION_BASELINE_UNCHANGED
+Freeze: CORE_BATCH_01_FROZEN
+```
+
+Documentation review:
+
+```text
+POST_FREEZE_DOCUMENTATION_ARCHITECTURE_REVIEW_PASS
+FROZEN_FOUNDATION_AND_CORE_BOUNDARIES_PRESERVED
+ROADMAP_DOCUMENTATION_CHAIN_COHERENT
+NO_PILOT_SELECTED
+NO_IMPLEMENTATION_AUTHORIZATION
+```
+
+RKL-1 review:
+
+```text
+RKL_1_DOCUMENTATION_REVIEW_PASS
+SOURCE_GOVERNANCE_BOUNDARIES_PRESERVED
+KNOWLEDGE_GARDEN_COMPATIBILITY_PRESERVED
+NO_LEGAL_OR_CERTIFICATION_AUTHORITY
+NO_CONNECTOR_OR_IMPLEMENTATION_AUTHORIZATION
+```
+
+All post-freeze roadmap and RKL-1 work is documentation-only. Frozen Core source, tests, workflows, and Foundation records were not modified.
 
 ## Implementation and Test Artifacts
 
@@ -114,45 +147,6 @@ Implemented representational records:
 - Module Contract
 - Conformance Result
 
-## Verification State
-
-Isolated verification:
-
-```text
-Ran 34 tests
-OK
-```
-
-Hosted verification:
-
-```text
-Workflow: Core Batch 01
-Run ID: 29159400862
-Run number: 11
-Job: test
-Conclusion: success
-```
-
-Engineering review decision:
-
-```text
-PASS
-```
-
-Baseline integrity decision:
-
-```text
-VERIFIED_IMPLEMENTATION_BASELINE_UNCHANGED
-```
-
-Freeze decision:
-
-```text
-CORE_BATCH_01_FROZEN
-```
-
-All post-freeze roadmap work through the pilot-candidate plan is documentation-only. It did not modify frozen Core source, tests, workflows, or Foundation records.
-
 ## Closure Records
 
 - `docs/CORE_BATCH_01_TEST_MANIFEST.md`
@@ -172,16 +166,34 @@ All post-freeze roadmap work through the pilot-candidate plan is documentation-o
 - `docs/BUILDINGOS_HUMAN_INTERFACE_ARCHITECTURE.md`
 - `docs/BUILDINGOS_READ_ONLY_OPERATOR_CONSOLE_PROTOTYPE_BRIEF.md`
 - `docs/BUILDINGOS_PILOT_CANDIDATE_PLAN.md`
+- `docs/BUILDINGOS_POST_FREEZE_DOCUMENTATION_ARCHITECTURE_REVIEW.md`
 - `docs/BUILDINGOS_REGULATORY_KNOWLEDGE_AND_KNOWLEDGE_GARDEN_PLAN.md`
+- `docs/BUILDINGOS_RKL_1_SOURCE_GOVERNANCE_AND_INFORMATION_ARCHITECTURE.md`
+- `docs/BUILDINGOS_RKL_1_DOCUMENTATION_REVIEW.md`
+
+## Product Architecture Chain
+
+```text
+Product North Star
+→ ClimateOS Evidence Intake Contract
+→ S7 Candidate Evidence Profile
+→ Project Genome
+→ Lifecycle Stage Graph
+→ Human Interface Architecture
+→ Read-Only Operator Console Brief
+→ Pilot Candidate Plan
+→ Post-Freeze Documentation Review
+→ RKL-1 Source Governance Architecture
+→ RKL-1 Review
+```
 
 ## Active Boundaries
 
-The frozen Core Batch 01 and current documentation planning do not authorize:
+The frozen Core Batch 01 and current documentation records do not authorize:
 
 - production database;
 - public API;
-- production Operator Console;
-- prototype frontend or backend implementation;
+- production or prototype UI implementation;
 - permissions and user management;
 - workflow automation;
 - automatic lifecycle transitions;
@@ -189,7 +201,7 @@ The frozen Core Batch 01 and current documentation planning do not authorize:
 - PRI, MCP Runtime, generic agent runtime, QClaw, and n8n integration;
 - application migration;
 - automated ClimateOS-to-BuildingOS transfer;
-- regulatory source connectors;
+- regulatory source connectors, web scraping, or automated monitoring;
 - legal, compliance, certification, contractual, statutory, engineering-signoff, safety, planning-approval, or professional conclusions;
 - live pilot selection or activation;
 - confidential, critical-infrastructure, personal, licensed, or security-sensitive publication;
@@ -197,39 +209,19 @@ The frozen Core Batch 01 and current documentation planning do not authorize:
 
 ## Product North Star
 
-Authoritative record:
+BuildingOS is an AI-native, evidence-driven, human-governed operating system for helping people progress built-environment and infrastructure projects through their full lifecycle with visible evidence, explicit claims, accountable review, and traceable decisions.
 
-- `docs/BUILDINGOS_PRODUCT_NORTH_STAR.md`
+The architecture supports different project scales through one frozen Governance Kernel, Project Genome, project-specific Lifecycle Stage Graphs, evidence exchange contracts, human interface surfaces, and future domain and jurisdiction knowledge packs.
 
-BuildingOS is being developed as an AI-native, evidence-driven, human-governed operating system for helping people progress built-environment and infrastructure projects through their full lifecycle with visible evidence, explicit claims, accountable review, and traceable decisions.
+## Cross-Domain Evidence Boundary
 
-The architecture direction supports different project scales and types through a shared Governance Kernel, Project Genome, project-specific Lifecycle Stage Graphs, domain capability packs, jurisdiction knowledge packs, evidence exchange contracts, tool adapters, and an adaptive human interface.
+ClimateOS may contribute source, provenance, site, climate-risk, building, MEP, BIM, fixture, construction, commissioning, operations, and environmental evidence.
 
-The North Star is a documentation baseline and does not authorize implementation.
+ClimateOS conclusions, approval recommendations presented as decisions, compliance conclusions, lifecycle control, runtime authority, and unsupported project claims must not be imported as BuildingOS decisions.
 
-## Cross-Domain Evidence Direction
+## S7 Candidate Boundary
 
-Authoritative record:
-
-- `docs/BUILDINGOS_CLIMATEOS_CROSS_DOMAIN_EVIDENCE_INTAKE_CONTRACT.md`
-
-ClimateOS may contribute observations, climate-risk evidence, model outputs, sources, provenance, dates, methods, uncertainty, and authorised building, MEP, BIM, fixture, construction, commissioning, operations, and site-context evidence.
-
-BuildingOS may register and organise eligible inputs as project evidence subject to human review.
-
-ClimateOS conclusions, automated compliance decisions, approval authority, lifecycle control, runtime capability, and unsupported project claims must not be imported as BuildingOS decisions.
-
-No connector, database, API, queue, webhook, MCP tool, agent runtime, permissions model, or automated transfer is authorised.
-
-## S7 Sydney Candidate Direction
-
-Current candidate profile:
-
-- `docs/BUILDINGOS_S7_SYDNEY_CANDIDATE_EVIDENCE_INTAKE_PROFILE.md`
-
-S7 is treated only as a candidate large and complex public-information learning case for information architecture, project classification, lifecycle, MEP, BIM, construction, commissioning, operations, climate-risk, source-provenance, and regulatory-evidence planning.
-
-Current status:
+S7 remains:
 
 ```text
 CANDIDATE_LARGE_COMPLEX_PROJECT_LEARNING_CASE
@@ -239,19 +231,13 @@ NO_PROJECT_AUTHORITY
 NO_CONFIDENTIAL_DATA_ACCESS
 ```
 
-Public reporting and corporate statements must remain distinguished from official planning records, approved design, as-built condition, and operational evidence.
+Public reporting must remain distinguishable from official planning records, approved design, as-built condition, and operational evidence.
 
-Critical-infrastructure, security-sensitive, confidential, personal, network, access-control, and protected operational information must not be placed in the public repository.
+Critical-infrastructure, network, access-control, vulnerability, customer, confidential, and protected operational information is prohibited from the public repository.
 
-## Project Genome Direction
+## Project Genome and Lifecycle
 
-Authoritative record:
-
-- `docs/BUILDINGOS_PROJECT_GENOME_AND_CLASSIFICATION_STANDARD.md`
-
-The Project Genome is a versioned, evidence-linked description of a project, programme, site, asset, or bounded work package. It records project identity, boundary, typology, internal operating scale, jurisdiction context, lifecycle position, systems, stakeholders, complexity, evidence burden, governance depth, capability needs, security constraints, uncertainty, and escalation triggers.
-
-BuildingOS internal operating-scale classes:
+Internal operating scales:
 
 - `BOS-S` — small;
 - `BOS-M` — medium;
@@ -264,17 +250,9 @@ Provisional governance depths:
 - `GD-3` — enhanced;
 - `GD-4` — major or high-consequence.
 
-These are internal planning labels. They must not be confused with NCC building classes, planning categories, legal classifications, certification states, professional opinions, or approval decisions.
+These labels are internal planning aids and must not be confused with NCC building classes, statutory classifications, approvals, certification, or professional opinions.
 
-## Lifecycle Stage Graph Direction
-
-Authoritative record:
-
-- `docs/BUILDINGOS_LIFECYCLE_STAGE_GRAPH_ARCHITECTURE.md`
-
-A Lifecycle Stage Graph is a versioned, project-specific governance map of stage nodes, transition edges, entry and exit criteria, evidence, claims, reviews, authorised human decisions, hold points, branches, parallel paths, partial completion, re-entry, correction, supersession, and traceable history.
-
-Governing rule:
+Lifecycle governing rule:
 
 ```text
 The graph describes possible and recorded progression.
@@ -283,16 +261,7 @@ Humans review and decide.
 No node or edge moves itself.
 ```
 
-The architecture supports `BOS-S`, `BOS-M`, and `BOS-LC` projects without forcing identical process weight.
-
-No executable transition, workflow, permission, or automatic lifecycle movement is authorized.
-
 ## Human Interface Direction
-
-Authoritative records:
-
-- `docs/BUILDINGOS_HUMAN_INTERFACE_ARCHITECTURE.md`
-- `docs/BUILDINGOS_READ_ONLY_OPERATOR_CONSOLE_PROTOTYPE_BRIEF.md`
 
 Defined primary surfaces:
 
@@ -310,15 +279,9 @@ Supporting surfaces:
 - Governance Ledger View;
 - Module Contract Registry.
 
-The interface direction is evidence-linked, lifecycle-aware, human-governed, uncertainty-visible, repository-traceable, and read-only at the first prototype boundary.
-
-The prototype brief permits documentation and design planning only. No frontend, backend, production UI, database, permissions, workflow, connector, or live-project action is authorized.
+The first prototype boundary is read-only, non-production, non-operational, fictional or approved-public-information only, and not authorised for implementation.
 
 ## Pilot Candidate Direction
-
-Authoritative record:
-
-- `docs/BUILDINGOS_PILOT_CANDIDATE_PLAN.md`
 
 Candidate set:
 
@@ -338,35 +301,24 @@ NO_LIVE_PILOT_AUTHORIZED
 NO_IMPLEMENTATION_AUTHORIZATION
 ```
 
-The safest future demonstration sequence is fictional `BOS-S`, fictional `BOS-M`, then S7 public-information `BOS-LC` structure learning, followed by review before any real pilot selection.
+## Regulatory Knowledge Layer
 
-## Future Regulatory Knowledge Layer
-
-Planning record:
-
-- `docs/BUILDINGOS_REGULATORY_KNOWLEDGE_AND_KNOWLEDGE_GARDEN_PLAN.md`
-
-Planning status:
-
-```text
-PLANNING_BASELINE_V0_1_NOT_IMPLEMENTATION_AUTHORIZATION
-STATUS_REFRESHED_2026_07_14
-```
-
-The planned Regulatory Knowledge Layer preserves:
+The planning baseline and RKL-1 architecture preserve:
 
 - Australian NCC source, edition, volume, amendment, adoption, commencement, effective-date, and jurisdiction context;
-- referenced standards identifiers, editions, relationships, access, and licensing boundaries;
-- NSW legislation, regulations, environmental planning instruments, approval records, authority guidance, and version status;
+- referenced standards identifiers, editions, relationships, access, copyright, and licensing boundaries;
+- NSW Acts, regulations, environmental planning instruments, approval records, authority guidance, and version status;
 - Commonwealth, state, territory, and local jurisdictional variations;
 - source-change and supersession tracking;
 - project-specific applicability and compliance-related claims;
 - visible assumptions, limitations, unresolved questions, and re-review triggers;
 - mandatory attributed human review.
 
+RKL-1 also defines source authority classes, source identity, provision and relationship records, version and date distinctions, manual source governance, source-change procedure, project and lifecycle relationships, and quality checks.
+
 BuildingOS may organise and support review. It must not determine legal applicability, certify compliance, replace an authority, or provide legal or certification advice.
 
-The next possible regulatory deliverable is a documentation-only RKL-1 Source Governance and Information Architecture brief after review of the combined package.
+RKL-2 fictional demonstration records are not prepared and are not authorised by the current record.
 
 ## Markdown-First Knowledge Garden Compatibility
 
@@ -374,92 +326,76 @@ The Knowledge Garden model preserves:
 
 - GitHub `main` as the authoritative approved source;
 - portable Markdown and stable filenames;
-- ordinary links, backlinks, indexes, and maps of content that remain readable outside Obsidian;
-- reviewable promotion of drafts through branches, diffs, pull requests, or equivalent recorded review;
+- ordinary links, backlinks, indexes, and maps of content readable outside Obsidian;
+- reviewable promotion of drafts;
 - separation of private research from approved project records;
 - controlled synchronisation;
 - no blind two-way folder sync;
-- no copied shadow library of NCC material, referenced standards, legislation, paid legal databases, confidential project files, or security-sensitive material.
+- no copied shadow library of NCC, standards, legislation, paid databases, confidential project files, or security-sensitive material.
 
 Official publishers and authorised project systems remain authoritative for controlled source content.
 
-## Combined Documentation Review Scope
+## Decision Options Now Available
 
-The next review should assess the package as one architecture chain:
+### Option A — Authorise RKL-2 Fictional Demonstration Planning
 
-```text
-Product North Star
-→ Cross-Domain Evidence Intake
-→ S7 Candidate Evidence Profile
-→ Project Genome
-→ Lifecycle Stage Graph
-→ Human Interface Architecture
-→ Read-Only Prototype Brief
-→ Pilot Candidate Plan
-→ Regulatory Knowledge and Knowledge Garden Boundaries
-```
+Prepare fictional source metadata, applicability claims, compliance-related claims, source-change notices, and human review records.
 
-Review questions:
+This option remains documentation-only and must not use the examples as legal or certification advice.
 
-1. Are product scope and architecture boundaries coherent?
-2. Do Project Genome, lifecycle, interface, and pilot scales align?
-3. Are evidence, claims, reviews, decisions, and execution consistently separated?
-4. Is human authority explicit?
-5. Are Regulatory Knowledge Layer and Knowledge Garden boundaries preserved?
-6. Does ClimateOS contribute evidence without importing conclusions or authority?
-7. Is S7 consistently candidate-only and security-safe?
-8. Does any record accidentally authorize implementation, a live pilot, legal advice, certification, or autonomous action?
-9. Is the documentation package sufficient to prepare a future bounded implementation authorization brief, if the Chief Architect later chooses to do so?
+### Option B — Select a Pilot Candidate for Formal Selection Review
 
-## Next Governed Planning Sequence
+Choose one candidate for a Candidate Selection Record.
 
-1. Perform a combined documentation architecture review.
-2. Correct bounded documentation inconsistencies if found.
-3. Optionally prepare an RKL-1 Source Governance and Information Architecture brief as documentation only.
-4. Return to the Chief Architect before selecting a live pilot or authorizing any implementation.
-5. If implementation is later approved, prepare a separately bounded implementation brief, tests, review plan, stop conditions, and freeze pathway.
+Selection review does not authorize implementation or live pilot activation.
+
+### Option C — Authorise a Bounded Implementation Brief
+
+Permit preparation of an implementation brief only, not code, for a read-only fictional Operator Console prototype or another explicitly bounded capability.
+
+The brief must define scope, repository, data, architecture, tests, stop conditions, and prohibited capabilities before any code authorization.
+
+### Option D — Pause BuildingOS
+
+Preserve the current frozen Core and completed documentation package without further activity.
 
 ## Decisions Requiring Chief Architect Review
 
-Routine documentation review and bounded documentation correction may proceed.
+Chief Architect review is required before:
 
-Return to the Chief Architect before:
-
+- authorising RKL-2 fictional demonstration work under the current RKL gate;
+- selecting or activating a live pilot;
+- approving real project data use;
 - materially changing BuildingOS product scope;
-- changing the BuildingOS–PRI–ClimateOS architecture boundary;
-- selecting or activating a live pilot project;
+- changing the BuildingOS–ClimateOS–PRI architecture boundary;
+- authorizing implementation code or production design;
+- modifying the frozen Foundation or Core;
+- introducing a database, public API, permissions, workflow, external connector, production UI, application migration, runtime, or autonomous approval capability;
 - asserting legal, compliance, certification, contractual, statutory, engineering-signoff, safety, planning-approval, or professional authority;
-- authorizing implementation code for the next milestone;
-- modifying the frozen Foundation or Core Batch 01 baseline;
-- introducing a database, public API, permissions, automated workflow, external connector, production UI, application migration, or autonomous approval capability;
 - using confidential, critical-infrastructure, licensed, personal, or protected operational data.
 
 ## Current Blockers and Maintenance Items
 
-No blocker prevents the combined documentation review.
+No documentation defect blocks Chief Architect review.
 
-The official local workspace `D:\Codex\BuildingOS` was not independently inspected during the GitHub connector run. GitHub `main` remains the source of truth, and the local workspace should pull the latest commits before local work resumes.
+The official local workspace `D:\Codex\BuildingOS` was not independently inspected during the GitHub connector run. GitHub `main` remains the source of truth. Local work should begin with a fetch or pull and clean-worktree verification.
 
-The repository `README.md` contains historical project-status wording from before Core Batch 01 implementation and freeze. A bounded documentation refresh is safe and should not change product scope or frozen records.
+Named real candidates require fresh ownership, authority, source, privacy, publication, professional-review, and project-status verification before consequential use.
 
 ## Safe Re-entry Point
 
 Continue from:
 
-`POST_FREEZE_COMBINED_DOCUMENTATION_ARCHITECTURE_REVIEW`
+`POST_RKL_1_CHIEF_ARCHITECT_DECISION_GATE`
 
 Read first:
 
 1. `PROJECT_CONTEXT.md`
-2. `docs/BUILDINGOS_PRODUCT_NORTH_STAR.md`
-3. `docs/BUILDINGOS_CLIMATEOS_CROSS_DOMAIN_EVIDENCE_INTAKE_CONTRACT.md`
-4. `docs/BUILDINGOS_S7_SYDNEY_CANDIDATE_EVIDENCE_INTAKE_PROFILE.md`
-5. `docs/BUILDINGOS_PROJECT_GENOME_AND_CLASSIFICATION_STANDARD.md`
-6. `docs/BUILDINGOS_LIFECYCLE_STAGE_GRAPH_ARCHITECTURE.md`
-7. `docs/BUILDINGOS_HUMAN_INTERFACE_ARCHITECTURE.md`
-8. `docs/BUILDINGOS_READ_ONLY_OPERATOR_CONSOLE_PROTOTYPE_BRIEF.md`
-9. `docs/BUILDINGOS_PILOT_CANDIDATE_PLAN.md`
-10. `docs/BUILDINGOS_REGULATORY_KNOWLEDGE_AND_KNOWLEDGE_GARDEN_PLAN.md`
+2. `docs/BUILDINGOS_POST_FREEZE_DOCUMENTATION_ARCHITECTURE_REVIEW.md`
+3. `docs/BUILDINGOS_RKL_1_SOURCE_GOVERNANCE_AND_INFORMATION_ARCHITECTURE.md`
+4. `docs/BUILDINGOS_RKL_1_DOCUMENTATION_REVIEW.md`
+5. `docs/BUILDINGOS_PILOT_CANDIDATE_PLAN.md`
+6. `docs/BUILDINGOS_READ_ONLY_OPERATOR_CONSOLE_PROTOTYPE_BRIEF.md`
 
 Do not modify the frozen Foundation or Core Batch 01 baseline without formal Change Request governance.
 
