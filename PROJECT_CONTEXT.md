@@ -90,7 +90,7 @@ Freeze: CORE_BATCH_01_FROZEN
 - Regulatory Knowledge Layer and Knowledge Garden planning status refreshed after Core freeze.
 - Post-Freeze Documentation Architecture Review completed with PASS.
 - RKL-1 Source Governance and Information Architecture prepared.
-- RKL-1 detailed Documentation Architecture Review completed with PASS.
+- RKL-1 Documentation Review completed with PASS.
 - RKL-1 canonical source-status and public/restricted-locator corrections applied.
 - RKL-1 bounded corrections independently verified.
 - README historical project status refreshed.
@@ -109,16 +109,14 @@ NO_PILOT_SELECTED
 NO_IMPLEMENTATION_AUTHORIZATION
 ```
 
-RKL-1 architecture review:
+RKL-1 review:
 
 ```text
-RKL_1_DOCUMENTATION_ARCHITECTURE_REVIEW_PASS
-FROZEN_FOUNDATION_AND_CORE_BOUNDARIES_PRESERVED
-REGULATORY_SOURCE_GOVERNANCE_BOUNDARY_COHERENT
-KNOWLEDGE_GARDEN_COMPATIBILITY_BOUNDARY_COHERENT
-NO_SOURCE_CONNECTOR_AUTHORIZATION
+RKL_1_DOCUMENTATION_REVIEW_PASS
+SOURCE_GOVERNANCE_BOUNDARIES_PRESERVED
+KNOWLEDGE_GARDEN_COMPATIBILITY_PRESERVED
 NO_LEGAL_OR_CERTIFICATION_AUTHORITY
-NO_IMPLEMENTATION_AUTHORIZATION
+NO_CONNECTOR_OR_IMPLEMENTATION_AUTHORIZATION
 ```
 
 RKL-1 bounded correction verification:
@@ -180,11 +178,8 @@ Implemented representational records:
 - `docs/BUILDINGOS_POST_FREEZE_DOCUMENTATION_ARCHITECTURE_REVIEW.md`
 - `docs/BUILDINGOS_REGULATORY_KNOWLEDGE_AND_KNOWLEDGE_GARDEN_PLAN.md`
 - `docs/BUILDINGOS_RKL_1_SOURCE_GOVERNANCE_AND_INFORMATION_ARCHITECTURE.md`
-- `docs/BUILDINGOS_RKL_1_DOCUMENTATION_ARCHITECTURE_REVIEW.md`
 - `docs/BUILDINGOS_RKL_1_DOCUMENTATION_REVIEW.md`
 - `docs/BUILDINGOS_RKL_1_BOUNDED_CORRECTION_VERIFICATION.md`
-
-The detailed `BUILDINGOS_RKL_1_DOCUMENTATION_ARCHITECTURE_REVIEW.md` is the canonical RKL-1 architecture review. The shorter `BUILDINGOS_RKL_1_DOCUMENTATION_REVIEW.md` remains a supplemental review record.
 
 ## Product Architecture Chain
 
@@ -199,7 +194,7 @@ Product North Star
 → Pilot Candidate Plan
 → Post-Freeze Documentation Review
 → RKL-1 Source Governance Architecture
-→ RKL-1 Architecture Review
+→ RKL-1 Review
 → RKL-1 Bounded Correction Verification
 ```
 
@@ -401,7 +396,7 @@ Read first:
 1. `PROJECT_CONTEXT.md`
 2. `docs/BUILDINGOS_POST_FREEZE_DOCUMENTATION_ARCHITECTURE_REVIEW.md`
 3. `docs/BUILDINGOS_RKL_1_SOURCE_GOVERNANCE_AND_INFORMATION_ARCHITECTURE.md`
-4. `docs/BUILDINGOS_RKL_1_DOCUMENTATION_ARCHITECTURE_REVIEW.md`
+4. `docs/BUILDINGOS_RKL_1_DOCUMENTATION_REVIEW.md`
 5. `docs/BUILDINGOS_RKL_1_BOUNDED_CORRECTION_VERIFICATION.md`
 6. `docs/BUILDINGOS_PILOT_CANDIDATE_PLAN.md`
 7. `docs/BUILDINGOS_READ_ONLY_OPERATOR_CONSOLE_PROTOTYPE_BRIEF.md`
