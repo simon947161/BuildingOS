@@ -11,11 +11,13 @@
 ## Reviewed Records
 
 - `docs/BUILDINGOS_RKL_1_SOURCE_GOVERNANCE_AND_INFORMATION_ARCHITECTURE.md`
-- `docs/BUILDINGOS_RKL_1_DOCUMENTATION_ARCHITECTURE_REVIEW.md`
+- `docs/BUILDINGOS_RKL_1_DOCUMENTATION_REVIEW.md`
+
+The concise `BUILDINGOS_RKL_1_DOCUMENTATION_REVIEW.md` is the retained RKL-1 review record in the current repository state.
 
 ## Correction Scope
 
-The correction addressed the two bounded documentation-maintenance findings recorded before any RKL-2 fictional demonstration package:
+The correction addressed two bounded documentation-consistency matters before any RKL-2 fictional demonstration package:
 
 1. source-status vocabulary harmonisation;
 2. distinction between public official URLs and restricted or authorised source locators.
