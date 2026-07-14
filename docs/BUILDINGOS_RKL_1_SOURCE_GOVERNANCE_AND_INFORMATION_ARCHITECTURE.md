@@ -8,6 +8,10 @@
 
 2026-07-14
 
+## Bounded Correction Date
+
+2026-07-14
+
 ## Purpose
 
 Define the first documentation-only information architecture for a future BuildingOS Regulatory Knowledge Layer covering source governance, version and effective-date context, jurisdictional variation, project references, applicability and compliance-related claims, source change, supersession, and mandatory human review.
@@ -37,22 +41,23 @@ RKL-1 consumes the frozen Governance Kernel concepts without modifying them:
 
 The frozen C00 through C01-I Foundation and Core Batch 01 baseline remain unchanged.
 
-## RKL-1 Scope
+## Scope
 
 RKL-1 defines documentation architecture for:
 
 1. authoritative-source identification;
-2. source-type vocabulary;
+2. source-type and authority vocabulary;
 3. source metadata and stable identity;
-4. edition, version, amendment, commencement, adoption, and effective-date context;
-5. jurisdiction and geographic scope;
-6. referenced-document relationships;
-7. project and lifecycle-stage references;
-8. applicability and compliance-related claims;
-9. human review and competence context;
-10. source change, supersession, and re-review;
-11. repository and Knowledge Garden organisation;
-12. manual, reviewable source-governance procedures.
+4. edition, version, amendment, commencement, adoption, transition, and effective-date context;
+5. public, restricted, confidential, licensed, archived, and authorised source locators;
+6. jurisdiction and geographic scope;
+7. referenced-document relationships;
+8. project and lifecycle-stage references;
+9. applicability and compliance-related claims;
+10. human review and competence context;
+11. source change, supersession, and re-review;
+12. repository and Knowledge Garden organisation;
+13. manual, reviewable source-governance procedures.
 
 ## Explicit Exclusions
 
@@ -70,19 +75,18 @@ RKL-1 does not:
 
 ## Planned Source Coverage
 
-## 1. Australian National Construction Code
+### 1. Australian National Construction Code
 
-The source architecture should support metadata for:
+Support metadata for:
 
-- NCC edition;
-- volume;
+- NCC edition and volume;
 - amendment, correction, or errata;
 - publication date;
-- adoption or commencement context;
+- adoption and commencement context;
 - transition arrangements;
 - state or territory variation;
 - referenced documents;
-- official publisher and URL;
+- official publisher and locator;
 - access date;
 - effective-from and effective-to context;
 - source status;
@@ -90,28 +94,26 @@ The source architecture should support metadata for:
 
 The newest published edition must not be assumed to apply automatically to every project.
 
-## 2. Referenced Standards
+### 2. Referenced Standards
 
-The architecture should support metadata for:
+Support metadata for:
 
-- standard identifier;
-- title;
+- standard identifier and title;
 - issuing body;
 - edition, revision, amendment, or reconfirmation;
 - publication date;
-- NCC, legislative, contractual, or project reference relationship;
-- access method;
+- NCC, legislative, contractual, or project relationship;
+- access method and source locator;
 - copyright and licensing note;
-- official or authorised location;
 - project applicability claim;
 - human review status;
 - supersession relationship.
 
 Full copyrighted standards must not be reproduced without clear permission or licence.
 
-## 3. NSW Legislation and Regulation
+### 3. NSW Legislation and Regulation
 
-The architecture should support official metadata for:
+Support official metadata for:
 
 - Act;
 - regulation;
@@ -125,16 +127,16 @@ The architecture should support official metadata for:
 - approval or consent record;
 - authority guideline or practice note;
 - official publication authority;
-- version-specific URL;
+- version-specific locator;
 - accessed-on date;
 - geographic and jurisdiction scope;
 - relationship to planning, building, environment, water, heritage, safety, operation, or other project subjects.
 
-The source register should remain selective and project-driven rather than attempting to mirror the entire NSW legal corpus.
+The source register should remain selective and project-driven rather than attempting to mirror the complete NSW legal corpus.
 
-## 4. Commonwealth, State, Territory, and Local Variations
+### 4. Commonwealth, State, Territory, and Local Variations
 
-The architecture should distinguish:
+Distinguish:
 
 - national base source;
 - adopting jurisdiction;
@@ -152,43 +154,58 @@ Local planning controls, consent conditions, approval pathways, and authority gu
 
 ## Source Authority Classes
 
-Every source record should declare an authority class.
+Every source record should declare one authority class:
 
-### `OFFICIAL_PRIMARY`
+- `OFFICIAL_PRIMARY`;
+- `OFFICIAL_DERIVED`;
+- `AUTHORISED_PROJECT_RECORD`;
+- `PROFESSIONAL_SECONDARY`;
+- `PUBLIC_SECONDARY`;
+- `AI_GENERATED_SUMMARY`;
+- `UNVERIFIED`.
 
-Material published by the responsible legislature, regulator, authority, code publisher, court, consent authority, or standards body.
+Authority class describes provenance and expected review treatment. It does not independently determine legal effect.
 
-### `OFFICIAL_DERIVED`
+## Canonical Source Status Vocabulary
 
-Official explanatory, guidance, practice, FAQ, or summary material that is useful but subordinate to the controlling source.
+RKL-1 uses one canonical source-status vocabulary:
 
-### `AUTHORISED_PROJECT_RECORD`
+- `DRAFT`;
+- `PUBLISHED_NOT_YET_EFFECTIVE`;
+- `IN_FORCE_OR_CURRENT`;
+- `TRANSITIONAL`;
+- `HISTORICAL`;
+- `REPEALED`;
+- `SUPERSEDED`;
+- `WITHDRAWN`;
+- `UNKNOWN`;
+- `REQUIRES_HUMAN_VERIFICATION`.
 
-A project-specific approval, consent, certificate, report, drawing, specification, review, inspection, test, or other record supplied under lawful project authority.
+All illustrative records, indexes, and future fictional demonstrations must use this vocabulary or explicitly declare a reviewed mapping.
 
-### `PROFESSIONAL_SECONDARY`
+Source status is descriptive and must identify the authority, version, jurisdiction, and date context supporting it.
 
-A practitioner, legal, technical, industry, academic, or professional-body analysis that is not itself controlling authority.
+## Source Locator and Access Model
 
-### `PUBLIC_SECONDARY`
+A regulatory source may be publicly available, restricted, licensed, archived, held in an authorised project system, or available only through metadata.
 
-News, corporate announcement, public database, website, or other secondary source requiring careful verification.
+Every source record should distinguish:
 
-### `AI_GENERATED_SUMMARY`
+- `public_official_url` — public official URL when available;
+- `authorised_source_locator` — non-public or system-specific reference when lawfully available;
+- `access_boundary` — `PUBLIC`, `RESTRICTED`, `CONFIDENTIAL`, `LICENSED`, or `UNKNOWN`;
+- `storage_policy` — `METADATA_ONLY`, `LINK_ONLY`, `LAWFUL_EXCERPT`, or `AUTHORISED_PROJECT_REFERENCE`;
+- `access_note` — human-readable access and handling limitations.
 
-A machine-generated summary that must remain visibly subordinate to its sources and cannot be treated as authoritative.
+A public URL is not mandatory when a lawful authorised locator or metadata-only record is appropriate.
 
-### `UNVERIFIED`
-
-A source or statement that has not yet been verified sufficiently for consequential use.
-
-Authority class does not determine legal effect. It describes source provenance and expected review treatment.
+At least one source-identification route must exist, but restricted or confidential locators must not be exposed in public records.
 
 ## Core Documentation Records
 
-## 1. Regulatory Source Record
+### 1. Regulatory Source Record
 
-Minimum fields:
+Illustrative minimum fields:
 
 ```yaml
 record_type: regulatory-source
@@ -199,7 +216,11 @@ authority_class: OFFICIAL_PRIMARY|OFFICIAL_DERIVED|AUTHORISED_PROJECT_RECORD|PRO
 issuing_authority: string
 jurisdiction: string
 geographic_scope: string
-official_url: string
+public_official_url: string-or-empty
+authorised_source_locator: string-or-empty
+access_boundary: PUBLIC|RESTRICTED|CONFIDENTIAL|LICENSED|UNKNOWN
+storage_policy: METADATA_ONLY|LINK_ONLY|LAWFUL_EXCERPT|AUTHORISED_PROJECT_REFERENCE
+access_note: string
 source_identifier: string
 edition_or_version: string
 amendment: string
@@ -207,7 +228,7 @@ publication_date: YYYY-MM-DD-or-empty
 commencement_date: YYYY-MM-DD-or-empty
 effective_from: YYYY-MM-DD-or-empty
 effective_to: YYYY-MM-DD-or-empty
-status: in-force|historical|future|repealed|superseded|draft|unknown
+status: DRAFT|PUBLISHED_NOT_YET_EFFECTIVE|IN_FORCE_OR_CURRENT|TRANSITIONAL|HISTORICAL|REPEALED|SUPERSEDED|WITHDRAWN|UNKNOWN|REQUIRES_HUMAN_VERIFICATION
 accessed_on: YYYY-MM-DD
 licensing_note: string
 supersedes: []
@@ -220,7 +241,7 @@ limitations: []
 
 This is a documentation model, not an approved database schema.
 
-## 2. Regulatory Provision Reference
+### 2. Regulatory Provision Reference
 
 A bounded reference to a section, clause, part, schedule, performance requirement, deemed-to-satisfy provision, standard clause, approval condition, guideline section, or other defined source location.
 
@@ -238,11 +259,9 @@ Minimum fields:
 - limitations;
 - review status.
 
-The reference record must not reproduce controlled content beyond lawful and necessary use.
+### 3. Regulatory Relationship Record
 
-## 3. Regulatory Relationship Record
-
-Describes a relationship such as:
+Describes relationships such as:
 
 - NCC references standard;
 - Act authorises regulation;
@@ -254,159 +273,118 @@ Describes a relationship such as:
 - project claim cites a provision;
 - source change triggers re-review.
 
-Minimum fields:
+### 4. Project Regulatory Reference
 
-- relationship ID;
-- source record A;
-- relationship type;
-- source record B;
-- effective period;
-- evidence;
-- uncertainty;
-- reviewer;
-- supersession state.
-
-## 4. Project Regulatory Reference
-
-Connects a source or provision to:
-
-- Project Genome;
-- site;
-- building or asset;
-- system;
-- design element;
-- lifecycle stage;
-- approval;
-- inspection;
-- test;
-- commissioning activity;
-- operational obligation;
-- adaptation or end-of-life activity.
+Connects a source or provision to a Project Genome, site, building, asset, system, design element, lifecycle stage, approval, inspection, test, commissioning activity, operational obligation, adaptation, or end-of-life activity.
 
 The reference identifies a review need. It does not determine applicability.
 
-## 5. Applicability Claim
+### 5. Applicability Claim
 
 A bounded claim that a source or provision may, may not, or is not yet known to apply to a defined project subject.
 
-Minimum fields:
+It must identify:
 
-- claim ID;
 - project and subject;
 - jurisdiction;
 - source and exact version;
 - effective date considered;
 - project date or decision context;
 - assumptions;
-- supporting evidence;
-- contradicting evidence;
-- uncertainty;
-- exclusions;
-- review status;
+- supporting and contradicting evidence;
+- uncertainty and exclusions;
 - reviewer identity and capacity;
 - review date;
 - re-review trigger;
-- external legal or authority confirmation required.
+- whether external legal or authority confirmation is required.
 
 An applicability claim is not a legal determination.
 
-## 6. Compliance-Related Claim
+### 6. Compliance-Related Claim
 
 A bounded statement about the relationship between a defined project state and a defined requirement.
 
-Minimum fields:
+It must identify:
 
-- claim ID;
 - exact subject assessed;
 - requirement and source version;
 - design, construction, as-built, commissioned, or operational state considered;
 - evidence reviewed;
 - method or review basis;
-- exclusions and limitations;
-- defects or outstanding items;
+- exclusions, limitations, defects, and outstanding items;
 - reviewer identity and attributed capacity;
-- review date;
-- validity or expiry context;
+- review date and validity context;
 - re-review trigger;
 - required external certification or approval;
 - explicit statement that the record is not general certification.
 
 BuildingOS must not present a compliance-related claim as a certificate, consent, approval, or universal conclusion.
 
-## 7. Human Review Record
+### 7. Human Review Record
 
-Minimum fields:
+A review record must identify:
 
-- review ID;
 - reviewer identity;
 - attributed role or capacity;
 - evidence of competence or authority where relevant;
 - review scope;
 - sources and claims reviewed;
 - date and effective-date context;
-- findings;
-- limitations;
+- findings and limitations;
 - conflicts or dissent;
 - recommendation where applicable;
-- decision authority boundary;
+- decision-authority boundary;
 - re-review trigger.
 
 System access does not establish competence or authority.
 
-## 8. Source Change Notice
+### 8. Source Change Notice
 
-Minimum fields:
+A source-change notice should identify:
 
-- notice ID;
-- source record;
-- detected or reported change;
-- previous version;
-- new or candidate version;
+- prior and candidate versions;
 - publication or effective date;
 - detection source;
 - verification state;
-- potentially affected projects, claims, stages, and decisions;
+- affected projects, claims, stages, and decisions;
 - reviewer;
 - required follow-up;
-- closure or supersession relationship.
+- closure and supersession relationships.
 
 A change notice must not silently rewrite existing claims or lifecycle records.
 
-## 9. Regulatory Review Queue Item
+### 9. Regulatory Review Queue Item
 
-A documentation-only record identifying a matter that requires human attention.
-
-Possible reasons:
+A documentation-only record may identify matters requiring human attention, such as:
 
 - source version changed;
 - effective date reached;
 - transition period ending;
-- project scope changed;
-- jurisdiction changed;
-- approval condition added or modified;
+- project scope or jurisdiction changed;
+- approval condition changed;
 - evidence superseded;
 - claim expired;
-- reviewer requested re-review;
 - conflicting official sources;
 - missing or inaccessible standard;
 - uncertain legal or authority pathway.
 
-A queue item does not create workflow execution or a permission system.
+A queue item does not create workflow execution or permissions.
 
 ## Source Identity Rules
 
 1. Each source record should have a stable repository ID independent of title changes.
 2. Each edition, version, or materially different legal state should remain distinguishable.
 3. Historical records should remain linked rather than overwritten.
-4. Official URLs should be preserved with accessed-on dates.
-5. A source title alone is insufficient identity.
-6. Consolidated, point-in-time, historical, future, and repealed versions must be distinguished.
-7. Project references must identify the source version and date context considered.
-8. Unknown version or effective-date context must be visible.
+4. Public URLs should be preserved with access dates when available.
+5. Restricted source locators should remain controlled and must not be exposed publicly.
+6. A source title alone is insufficient identity.
+7. Consolidated, point-in-time, historical, future, and repealed versions must be distinguished.
+8. Project references must identify the source version and date context considered.
+9. Unknown version or effective-date context must remain visible.
 
 ## Version and Effective-Date Model
 
-The architecture should distinguish:
+Distinguish:
 
 - publication date;
 - assent or issue date;
@@ -425,23 +403,6 @@ The architecture should distinguish:
 
 These dates must not be collapsed into one generic date field.
 
-## Source Status Model
-
-Suggested source states:
-
-- `DRAFT`;
-- `PUBLISHED_NOT_YET_EFFECTIVE`;
-- `IN_FORCE_OR_CURRENT`;
-- `TRANSITIONAL`;
-- `HISTORICAL`;
-- `REPEALED`;
-- `SUPERSEDED`;
-- `WITHDRAWN`;
-- `UNKNOWN`;
-- `REQUIRES_HUMAN_VERIFICATION`.
-
-Status is descriptive and must identify the authority and date context supporting it.
-
 ## Jurisdiction Model
 
 Every consequential record should distinguish where relevant:
@@ -458,16 +419,14 @@ Every consequential record should distinguish where relevant:
 
 The system must not flatten multiple jurisdictions into one answer.
 
-## Source-Governance Procedure
-
-RKL-1 defines the following manual, reviewable procedure:
+## Manual Source-Governance Procedure
 
 ```text
 Identify Project Question
 → Locate Candidate Official Source
 → Verify Authority and Exact Version
 → Record Publication, Commencement, Effective Date, and Jurisdiction Context
-→ Record Licensing and Access Boundary
+→ Record Public or Authorised Locator, Access Boundary, Storage Policy, and Licensing Limits
 → Link Related Sources and Supersession
 → Draft Bounded Applicability or Compliance-Related Claim
 → Obtain Attributed Human Review
@@ -480,7 +439,7 @@ No step is automatically executed by this architecture.
 
 ## Source Selection Priority
 
-When sources conflict or overlap, the documentation process should prefer:
+When sources conflict or overlap, documentation should prefer:
 
 1. exact official controlling source;
 2. official point-in-time or versioned source;
@@ -511,18 +470,9 @@ When a source change is identified:
 
 ## Lifecycle Stage Graph Relationship
 
-Regulatory records may be linked to stage entry, exit, hold, review, and re-entry conditions.
+Regulatory records may link to stage entry, exit, hold, review, and re-entry conditions.
 
-Examples:
-
-- planning source change before application;
-- approval condition before design release;
-- NCC or standard version question before technical documentation;
-- inspection or certification evidence before handover;
-- operational obligation before service commencement;
-- source change triggering adaptation or re-review.
-
-The Regulatory Knowledge Layer may trigger a review need in documentation. It must not automatically move the Lifecycle Stage Graph.
+The Regulatory Knowledge Layer may identify a review need or hold condition in documentation. It must not automatically move a Lifecycle Stage Graph node or edge.
 
 ## Human Interface Relationship
 
@@ -531,6 +481,7 @@ A future read-only interface may show:
 - source identity and authority class;
 - exact version and effective-date context;
 - jurisdiction;
+- public or controlled source-locator status without exposing restricted locators;
 - related and superseded sources;
 - project references;
 - applicability and compliance-related claims;
@@ -540,7 +491,7 @@ A future read-only interface may show:
 - re-review triggers;
 - links to official sources and approved repository records.
 
-The interface must display a clear disclaimer that BuildingOS is not providing legal or certification advice.
+The interface must state clearly that BuildingOS is not providing legal or certification advice.
 
 ## Repository Information Architecture
 
@@ -589,7 +540,7 @@ These directories are planning proposals only and are not created by this record
 The repository may preserve:
 
 - source metadata;
-- official URLs;
+- public official URLs and controlled locator metadata;
 - identifiers;
 - version and date context;
 - lawful short excerpts where necessary and permitted;
@@ -605,6 +556,7 @@ The repository must not preserve without authority:
 - confidential legal advice;
 - confidential project approvals or reports;
 - personal information;
+- restricted source-system locators in public records;
 - security-sensitive or critical-infrastructure information.
 
 ## Quality Checks
@@ -614,18 +566,19 @@ Every consequential regulatory record should be checked for:
 1. stable identity;
 2. official or clearly classified source authority;
 3. exact version or explicit uncertainty;
-4. publication, commencement, effective-date, and access-date context;
-5. jurisdiction and geographic scope;
-6. licensing and access boundary;
-7. supersession relationship;
-8. project and lifecycle relationship;
-9. claim scope and limitations;
-10. supporting and contradicting evidence;
-11. human reviewer and capacity;
-12. re-review trigger;
-13. authoritative-source link;
-14. no legal, certification, or professional overclaim;
-15. no automatic lifecycle or project effect.
+4. canonical source status;
+5. publication, commencement, effective-date, and access-date context;
+6. jurisdiction and geographic scope;
+7. public or authorised locator, access boundary, and storage policy;
+8. licensing and content boundary;
+9. supersession relationship;
+10. project and lifecycle relationship;
+11. claim scope and limitations;
+12. supporting and contradicting evidence;
+13. human reviewer and capacity;
+14. re-review trigger;
+15. no legal, certification, or professional overclaim;
+16. no automatic lifecycle or project effect.
 
 ## Manual Fictional Demonstration Boundary
 
@@ -635,6 +588,7 @@ A future RKL-2 demonstration may use fictional examples for:
 - referenced-standard metadata;
 - NSW legislation or regulation metadata;
 - jurisdictional variation;
+- public and restricted locator handling;
 - source change notice;
 - applicability claim;
 - compliance-related claim;
@@ -653,7 +607,7 @@ No RKL implementation may begin until:
 - human authority and reviewer requirements are approved;
 - claim semantics are approved;
 - change and supersession procedure is approved;
-- privacy, publication, and security boundaries are approved;
+- privacy, publication, locator, and security boundaries are approved;
 - data and interface architecture are separately reviewed;
 - explicit Chief Architect implementation authorization is issued.
 
@@ -661,6 +615,9 @@ No RKL implementation may begin until:
 
 ```text
 RKL_1_SOURCE_GOVERNANCE_AND_INFORMATION_ARCHITECTURE_V0_1_PREPARED
+BOUNDED_DOCUMENTATION_CORRECTIONS_APPLIED
+CANONICAL_STATUS_VOCABULARY_ESTABLISHED
+PUBLIC_AND_RESTRICTED_SOURCE_LOCATORS_DISTINGUISHED
 DOCUMENTATION_ONLY
 NO_SOURCE_CONNECTOR_AUTHORIZATION
 NO_LEGAL_OR_CERTIFICATION_AUTHORITY
@@ -669,6 +626,6 @@ NO_IMPLEMENTATION_AUTHORIZATION
 
 ## Next Safe Activity
 
-The next safe action is a bounded review of RKL-1 against the combined BuildingOS documentation architecture.
+RKL-1 is ready for a bounded correction verification.
 
-After review, a fictional RKL-2 demonstration set may be proposed only under separate documentation approval. Any live source connector, automated monitoring, database, production interface, legal conclusion, certification function, or implementation code requires explicit Chief Architect authorization.
+After verification, RKL-2 fictional demonstration work remains separately gated. Any live source ingestion, connector, monitoring, database, API, permissions, workflow, production UI, legal conclusion, certification conclusion, or implementation code requires explicit Chief Architect authorization.
