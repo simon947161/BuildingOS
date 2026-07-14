@@ -8,21 +8,27 @@
 
 2026-07-12
 
+## Status Refreshed
+
+2026-07-14
+
 ## Purpose
 
-Define a bounded future direction for a BuildingOS Regulatory Knowledge Layer and an Obsidian-compatible Knowledge Garden without changing the frozen M1 Foundation, the verified Core Batch 01 implementation baseline, or the current Chief Architect freeze gate.
+Define a bounded future direction for a BuildingOS Regulatory Knowledge Layer and an Obsidian-compatible Knowledge Garden without changing the frozen M1 Foundation, the active Core Batch 01 implementation freeze, or the current documentation-only product architecture boundaries.
 
-This plan is documentation only. It does not authorize implementation code, legal interpretation, certification, compliance approval, external integration, automated decisions, or Operator Console implementation.
+This plan is documentation only. It does not authorize implementation code, legal interpretation, certification, compliance approval, external integration, automated decisions, or production Operator Console implementation.
 
 ## Current Governance Relationship
 
-Core Batch 01 remains technically verified and engineering-review passed, but is not formally frozen until the Chief Architect records:
+Core Batch 01 was formally approved and frozen on 2026-07-13 at implementation baseline:
 
 ```text
-APPROVE_CORE_BATCH_01_FOR_FREEZE
+f84b22bf4921e4f98e15598c5c5a5aa18bcaa996
 ```
 
-This planning record does not activate that freeze and does not alter the next safe action recorded in `PROJECT_CONTEXT.md`.
+The current post-freeze roadmap has prepared documentation baselines for Product North Star, cross-domain evidence intake, Project Genome, Lifecycle Stage Graph, Human Interface Architecture, a read-only Operator Console Prototype Brief, and pilot candidates.
+
+This planning record does not modify the frozen Foundation or Core, select a live pilot, activate a regulatory capability, or authorize implementation.
 
 ## Product Intent
 
@@ -300,7 +306,9 @@ It should not become a copied shadow library of the NCC, standards, legislation,
 
 ## Future Operator Console Relationship
 
-After Core Batch 01 is formally frozen and a separate UI implementation authorization exists, a read-only Operator Console may display:
+The Human Interface Architecture and read-only Operator Console Prototype Brief are now prepared as documentation-only records.
+
+A future prototype or interface, if separately authorized, may display:
 
 - regulatory sources and versions;
 - jurisdiction and effective-date context;
@@ -312,15 +320,19 @@ After Core Batch 01 is formally frozen and a separate UI implementation authoriz
 
 The first interface must remain read-only and must not issue approvals, certifications, legal conclusions, or automatic lifecycle transitions.
 
+No prototype or production UI implementation is authorized by this planning record.
+
 ## Phased Planning Sequence
 
 ### RKL-0 — Planning Baseline
 
-This document only.
+This document only. Status refreshed after Core Batch 01 freeze and completion of the current documentation roadmap package.
 
 ### RKL-1 — Source Governance and Information Architecture
 
-After the current Core freeze gate is resolved, prepare a separately reviewable source register design, vocabulary, record relationships, and update procedure.
+After review of the combined documentation package, prepare a separately reviewable documentation-only source register design, vocabulary, record relationships, and update procedure.
+
+RKL-1 must not introduce source connectors, copied legal content, automated monitoring, legal conclusions, or implementation code.
 
 ### RKL-2 — Manual Fictional Demonstration Set
 
@@ -347,6 +359,8 @@ Implementation must not begin until all applicable conditions are met:
 - privacy and repository publication boundaries approved;
 - explicit Chief Architect implementation authorization issued.
 
+Core freeze is complete, but all remaining conditions continue to apply.
+
 ## Deferred Decisions
 
 - first NSW project and instrument set;
@@ -360,4 +374,6 @@ Implementation must not begin until all applicable conditions are met:
 
 ## Current Safe Next Action
 
-The immediate governance action remains the Core Batch 01 Chief Architect freeze decision. After formal activation, the next approved deliverable is the bounded read-only Operator Console prototype brief. This Regulatory Knowledge and Knowledge Garden plan remains a future planning baseline and does not bypass either gate.
+Review the combined post-freeze documentation package before any pilot selection or implementation authorization.
+
+After that review, the next documentation-only regulatory action may be an RKL-1 Source Governance and Information Architecture brief. Any live pilot, external connector, production interface, legal or certification authority, or implementation code still requires a separate Chief Architect decision.
