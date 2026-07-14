@@ -162,7 +162,11 @@ The frozen Core does not include production workflow, permissions, database, API
 
 - `docs/BUILDINGOS_REGULATORY_KNOWLEDGE_AND_KNOWLEDGE_GARDEN_PLAN.md`
 - `docs/BUILDINGOS_RKL_1_SOURCE_GOVERNANCE_AND_INFORMATION_ARCHITECTURE.md`
+- `docs/BUILDINGOS_RKL_1_DOCUMENTATION_ARCHITECTURE_REVIEW.md`
 - `docs/BUILDINGOS_RKL_1_DOCUMENTATION_REVIEW.md`
+- `docs/BUILDINGOS_RKL_1_BOUNDED_CORRECTION_VERIFICATION.md`
+
+The detailed RKL-1 Documentation Architecture Review is the canonical RKL-1 review. The shorter Documentation Review remains supplemental.
 
 ## Human Interface Direction
 
@@ -185,13 +189,15 @@ No frontend, backend, production UI, permissions, database, workflow, or live-pr
 
 The future Regulatory Knowledge Layer is planned to preserve:
 
-- Australian NCC edition, volume, amendment, adoption, commencement, effective date, and jurisdiction context;
+- Australian NCC edition, volume, amendment, adoption, commencement, transition, effective date, and jurisdiction context;
 - referenced standards identifiers, editions, relationships, access, copyright, and licensing boundaries;
 - NSW legislation, regulations, environmental planning instruments, approval records, authority guidance, and version status;
 - Commonwealth, state, territory, and local variations;
 - source change and supersession;
 - project-specific applicability and compliance-related claims;
 - mandatory human review and re-review triggers.
+
+RKL-1 now has one canonical source-status vocabulary and distinguishes public official URLs from authorised or restricted source locators, access boundaries, and metadata-only storage policies.
 
 BuildingOS is decision support and recordkeeping. It is not legal or certification advice.
 
@@ -238,8 +244,8 @@ NEXTDC S7 Sydney remains a candidate large and complex public-information learni
 | Read-only Operator Console brief | Documentation brief prepared; no implementation |
 | Pilot candidate plan | Candidates proposed; none selected |
 | Post-freeze documentation review | PASS |
-| RKL-1 source governance architecture | Documentation baseline prepared and reviewed |
-| RKL-2 fictional demonstration | Not authorised |
+| RKL-1 source governance architecture | Prepared, reviewed, corrected, and verified |
+| RKL-2 fictional demonstration | Not authorised; Chief Architect gate required |
 | Prototype or production implementation | Not authorised |
 
 ## Active Boundaries
@@ -254,7 +260,7 @@ BuildingOS currently does not authorize:
 - automatic lifecycle transitions;
 - autonomous approval or decision-making;
 - production Operator Console;
-- regulatory source connectors or automated monitoring;
+- regulatory source connectors, web scraping, or automated monitoring;
 - application migration;
 - legal, compliance, certification, contractual, statutory, engineering-signoff, safety, planning-approval, or professional conclusions;
 - live pilot selection or activation;
@@ -290,12 +296,19 @@ Lifecycle history preserves accountability.
 ```text
 CORE_BATCH_01_FROZEN
 POST_FREEZE_DOCUMENTATION_ARCHITECTURE_REVIEW_PASS
-RKL_1_DOCUMENTATION_REVIEW_PASS
+RKL_1_DOCUMENTATION_ARCHITECTURE_REVIEW_PASS
+RKL_1_BOUNDED_DOCUMENTATION_CORRECTIONS_VERIFIED
 NO_LIVE_PILOT_SELECTED
 NO_IMPLEMENTATION_AUTHORIZATION
 ```
 
-The next decision point is not more automatic building. It is a governed Chief Architect decision about whether to select a pilot, authorise a bounded implementation brief, or continue with further fictional documentation work.
+The next non-routine gate is:
+
+```text
+APPROVE_RKL_2_FICTIONAL_DOCUMENTATION_DEMONSTRATION_BRIEF
+```
+
+That gate would permit only a fictional, non-advisory Markdown demonstration set. It would not authorize live source ingestion, connectors, monitoring, database, API, permissions, workflow, production UI, legal conclusions, certification conclusions, pilot activation, or implementation code.
 
 ## License
 
