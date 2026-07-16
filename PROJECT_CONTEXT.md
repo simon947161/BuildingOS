@@ -381,7 +381,23 @@ Chief Architect review is required before:
 
 No documentation defect blocks Chief Architect review.
 
-The official local workspace `D:\Codex\BuildingOS` was not independently inspected during the GitHub connector run. GitHub `main` remains the source of truth. Local work should begin with fetch or pull, Head verification, and a clean-worktree check.
+The official local workspace `D:\Codex\BuildingOS` must be verified against GitHub `main` before any non-trivial work. GitHub `main` remains the source of truth. Local work must begin with fetch, Head verification, ahead/behind verification, and a clean-worktree check.
+
+Required preflight:
+
+```text
+git fetch origin main
+git status --short --branch
+git rev-list --left-right --count HEAD...origin/main
+git log -1 --format="%H%n%ci%n%s"
+git log -1 --format="%H%n%ci%n%s" origin/main
+```
+
+If local and `origin/main` diverge, stop and inspect both sides before editing or pushing. Do not push from a diverged state.
+
+Local divergence retrospective:
+
+- `docs/BUILDINGOS_LOCAL_DIVERGENCE_RETROSPECTIVE_ADDENDUM.md`
 
 Named real candidates require fresh ownership, authority, source, privacy, publication, professional-review, and project-status verification before consequential use.
 
